@@ -3,130 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Programcılığı - Kısa Test</title>
+  <title>Test/Sınav Formu</title>
   <style>
-    body{font-family:system-ui,Segoe UI,Roboto,sans-serif;margin:0;background:#0f172a;color:#e5e7eb}
-    .wrap{max-width:800px;margin:24px auto;padding:16px}
-    h1{margin:0 0 12px}
-    fieldset{border:1px solid #334155;border-radius:10px;margin:14px 0;padding:12px}
-    legend{color:#94a3b8;padding:0 6px}
+    body{font-family:Arial,Helvetica,sans-serif;margin:20px}
+    fieldset{margin:16px 0;padding:12px}
+    legend{font-weight:bold}
     label{display:block;margin:8px 0 4px}
-    .row{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
-    input,select,textarea{width:100%;padding:10px;border:1px solid #334155;border-radius:10px;background:#0b1220;color:#e5e7eb}
-    button{background:#22d3ee;color:#0b1220;border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}
-    button:hover{opacity:.9}
-    .q{margin:10px 0}
-    .muted{color:#94a3b8;font-size:.9rem}
-    .score{margin-top:10px;font-weight:700}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Web Programcılığı – Kısa Test</h1>
-    <p class="muted">Tüm soruları cevaplayıp gönder’e bas. Puanın ekranda gösterilecek.</p>
+  <h1>Test/Sınav Formu</h1>
 
-    <form id="quiz" novalidate>
-      <fieldset>
-        <legend>Aday Bilgileri</legend>
-        <div class="row">
-          <div>
-            <label for="ad">Ad Soyad *</label>
-            <input id="ad" name="ad" type="text" required placeholder="Ad Soyad">
-          </div>
-          <div>
-            <label for="mail">E-posta *</label>
-            <input id="mail" name="mail" type="email" required placeholder="ornek@posta.com">
-          </div>
-        </div>
-      </fieldset>
+  <form action="#" method="post">
+    <!-- Aday bilgileri -->
+    <fieldset>
+      <legend>Aday Bilgileri</legend>
+      <label for="ad">Ad Soyad *</label>
+      <input id="ad" name="ad" type="text" required>
 
-      <fieldset>
-        <legend>Test Soruları</legend>
+      <label for="mail">E-posta *</label>
+      <input id="mail" name="mail" type="email" required>
+    </fieldset>
 
-        <!-- S1: Radio -->
-        <div class="q">
-          <label><b>S1.</b> HTML’de paragraf için doğru etiket hangisidir?</label>
-          <label><input type="radio" name="s1" value="A"> &lt;pg&gt;</label>
-          <label><input type="radio" name="s1" value="B"> &lt;para&gt;</label>
-          <label><input type="radio" name="s1" value="C"> &lt;p&gt;</label>
-        </div>
+    <!-- Test soruları -->
+    <fieldset>
+      <legend>Test</legend>
 
-        <!-- S2: Checkbox (2 doğru) -->
-        <div class="q">
-          <label><b>S2.</b> Aşağıdakilerden hangileri <u>blok</u> düzeyinde elemandır? (İki doğru)</label>
-          <label><input type="checkbox" name="s2" value="div"> &lt;div&gt;</label>
-          <label><input type="checkbox" name="s2" value="span"> &lt;span&gt;</label>
-          <label><input type="checkbox" name="s2" value="p"> &lt;p&gt;</label>
-        </div>
+      <!-- S1: Kısa cevap (text) -->
+      <label for="s1">1) HTML'nin bir özelliğini yazın.</label>
+      <input id="s1" name="s1" type="text" placeholder="Kısa cevap">
 
-        <!-- S3: Select -->
-        <div class="q">
-          <label for="s3"><b>S3.</b> Hangi HTTP yöntemi URL’de veriyi gösterir?</label>
-          <select id="s3" name="s3" required>
-            <option value="">Seçiniz</option>
-            <option>GET</option>
-            <option>POST</option>
-          </select>
-        </div>
+      <!-- S2: Çoklu seçim (checkbox) -->
+      <p>2) Hangi programlama dillerini biliyorsunuz? <small>(Birden fazla seçebilirsiniz)</small></p>
+      <label><input type="checkbox" name="dil" value="HTML"> HTML</label>
+      <label><input type="checkbox" name="dil" value="CSS"> CSS</label>
+      <label><input type="checkbox" name="dil" value="JavaScript"> JavaScript</label>
 
-        <!-- S4: Number -->
-        <div class="q">
-          <label for="s4"><b>S4.</b> HTML başlıklarının (H1–H?) toplam kaç seviyesi vardır?</label>
-          <input id="s4" name="s4" type="number" min="1" max="10" placeholder="Sayı gir">
-        </div>
+      <!-- S3: Tek seçim (radio) -->
+      <p>3) Hangi tarayıcıyı kullanıyorsunuz? <small>(Tek seçim)</small></p>
+      <label><input type="radio" name="tarayici" value="Chrome"> Chrome</label>
+      <label><input type="radio" name="tarayici" value="Firefox"> Firefox</label>
+      <label><input type="radio" name="tarayici" value="Safari"> Safari</label>
 
-        <!-- S5: Kısa açık uçlu (text + pattern) -->
-        <div class="q">
-          <label for="s5"><b>S5.</b> CSS dosyası bağlamak için kullanılan etiket adı (yalnızca etiket adı):</label>
-          <input id="s5" name="s5" type="text" placeholder="örn: link"
-                 pattern="^\s*link\s*$" title="Sadece etiket adı: link">
-        </div>
+      <!-- S4: Açıklama (textarea) -->
+      <label for="yorum">4) Yorumlarınız:</label>
+      <textarea id="yorum" name="yorum" rows="4" placeholder="İsteğe bağlı"></textarea>
+    </fieldset>
 
-        <!-- Ek: Range (özdeğerlendirme) -->
-        <div class="q">
-          <label for="zorluk"><b>Ek.</b> Test zorluğu (0–10)</label>
-          <input type="range" id="zorluk" name="zorluk" min="0" max="10" value="5">
-        </div>
-      </fieldset>
-
-      <div style="display:flex;gap:8px;align-items:center">
-        <button type="submit">Gönder</button>
-        <button type="reset">Temizle</button>
-        <span id="sonuc" class="score"></span>
-      </div>
-    </form>
-  </div>
-
-  <script>
-    document.getElementById('quiz').addEventListener('submit', function(e){
-      e.preventDefault();
-
-      let puan = 0, toplam = 5;
-
-      // S1: <p>
-      const s1 = new FormData(this).get('s1');
-      if (s1 === 'C') puan++;
-
-      // S2: div ve p doğru, span yanlış
-      const s2 = new FormData(this).getAll('s2').sort().join(',');
-      if (s2 === 'div,p') puan++;
-
-      // S3: GET
-      const s3 = new FormData(this).get('s3');
-      if (s3 === 'GET') puan++;
-
-      // S4: 6
-      const s4 = Number(new FormData(this).get('s4'));
-      if (s4 === 6) puan++;
-
-      // S5: link
-      const s5 = (new FormData(this).get('s5') || '').trim().toLowerCase();
-      if (s5 === 'link') puan++;
-
-      document.getElementById('sonuc').textContent = `Puan: ${puan} / ${toplam}`;
-      // İstersen: doğru/yanlışları işaretlemek vs. eklenebilir.
-    });
-  </script>
+    <button type="submit">Gönder</button>
+    <button type="reset">Temizle</button>
+  </form>
 </body>
 </html>
-
