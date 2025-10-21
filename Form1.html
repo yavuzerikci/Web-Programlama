@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Üyelik Formu</title>
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#94a3b8; --accent:#22d3ee; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    .wrap{width:min(100%,900px);margin:32px auto;padding:16px}
+    h1{margin:0 0 12px}
+    .card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,.35);margin:16px 0}
+    fieldset{border:1px solid #334155;border-radius:12px;padding:16px;margin:16px 0}
+    legend{padding:0 8px;color:var(--muted)}
+    label{display:block;margin:10px 0 6px}
+    input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0b1220;color:var(--text)}
+    .row{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .inline{display:flex;flex-wrap:wrap;gap:12px}
+    .inline > label{margin:0}
+    .hint{color:var(--muted);font-size:.9rem}
+    button{background:var(--accent);color:#0b1220;border:none;padding:12px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+    button:hover{opacity:.9}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Üyelik Formu</h1>
+    <p class="hint">Bu form, çeşitli <code>input</code> türlerini ve form özniteliklerini sergilemek içindir.</p>
+
+    <form class="card" action="#" method="post" autocomplete="on" novalidate>
+      <fieldset>
+        <legend>Hesap Bilgileri</legend>
+        <div class="row">
+          <div>
+            <label for="username">Kullanıcı Adı *</label>
+            <input id="username" name="username" type="text" required minlength="3" maxlength="16" placeholder="en az 3 karakter">
+          </div>
+          <div>
+            <label for="email">E-posta *</label>
+            <input id="email" name="email" type="email" required placeholder="ornek@posta.com">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="password">Şifre *</label>
+            <input id="password" name="password" type="password" required minlength="6" placeholder="en az 6 karakter">
+          </div>
+          <div>
+            <label for="password2">Şifre Tekrar *</label>
+            <input id="password2" name="password2" type="password" required>
+          </div>
+        </div>
+
+        <label for="avatar">Profil Fotoğrafı (file)</label>
+        <input id="avatar" name="avatar" type="file" accept="image/*">
+      </fieldset>
+
+      <fieldset>
+        <legend>Kişisel Bilgiler</legend>
+        <div class="row">
+          <div>
+            <label for="name">Ad</label>
+            <input id="name" name="name" type="text" autocomplete="given-name">
+          </div>
+          <div>
+            <label for="surname">Soyad</label>
+            <input id="surname" name="surname" type="text" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="tel">Telefon (tel, pattern)</label>
+            <input id="tel" name="tel" type="tel" placeholder="05xx xxx xx xx" pattern="^0[0-9]{10}$">
+            <p class="hint">Şekil: 0XXXXXXXXXX</p>
+          </div>
+          <div>
+            <label for="birth">Doğum Tarihi (date)</label>
+            <input id="birth" name="birth" type="date">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="website">Kişisel Site (url)</label>
+            <input id="website" name="website" type="url" placeholder="https://…">
+          </div>
+          <div>
+            <label for="color">Favori Renk (color)</label>
+            <input id="color" name="color" type="color" value="#22d3ee">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="exp">Deneyim (range)</label>
+            <input id="exp" name="exp" type="range" min="0" max="10" step="1" value="3">
+          </div>
+          <div>
+            <label for="score">Puan (number)</label>
+            <input id="score" name="score" type="number" min="0" max="100" step="1" value="75">
+          </div>
+        </div>
+
+        <label for="city">Şehir (select)</label>
+        <select id="city" name="city">
+          <option value="">Seçiniz</option>
+          <option>Ankara</option><option>İstanbul</option><option>İzmir</option>
+          <option>Bursa</option><option>Kocaeli</option>
+        </select>
+
+        <div class="inline" style="margin-top:10px">
+          <span class="hint">Cinsiyet (radio):</span>
+          <label><input type="radio" name="gender" value="Erkek"> Erkek</label>
+          <label><input type="radio" name="gender" value="Kadın"> Kadın</label>
+          <label><input type="radio" name="gender" value="Belirtmek istemiyorum"> Belirtmek istemiyorum</label>
+        </div>
+
+        <div class="inline" style="margin-top:10px">
+          <span class="hint">Hobiler (checkbox):</span>
+          <label><input type="checkbox" name="hobbies" value="Sinema"> Sinema</label>
+          <label><input type="checkbox" name="hobbies" value="Spor"> Spor</label>
+          <label><input type="checkbox" name="hobbies" value="Kitap"> Kitap</label>
+          <label><input type="checkbox" name="hobbies" value="Gezmek"> Gezmek</label>
+        </div>
+
+        <label for="bio" style="margin-top:10px">Kendini Tanıt (textarea)</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Kısaca kendinden bahset…"></textarea>
+      </fieldset>
+
+      <div class="inline">
+        <label><input type="checkbox" required> Üyelik sözleşmesini okudum, kabul ediyorum.</label>
+      </div>
+
+      <div style="margin-top:14px">
+        <button type="submit">Gönder</button>
+        <button type="reset">Temizle</button>
+      </div>
+
+      <p class="hint" style="margin-top:12px">
+        Not: GitHub Pages statiktir; form gönderimleri örnektir (sunucu yoktur). Sunumdaki GET/POST anlatımı için yapı uygundur. :contentReference[oaicite:2]{index=2}
+      </p>
+    </form>
+  </div>
+</body>
+</html>
