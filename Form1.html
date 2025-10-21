@@ -3,55 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Test/Sınav Formu</title>
+  <title>Web Programcılığı – Basit Test</title>
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:20px}
-    fieldset{margin:16px 0;padding:12px}
-    legend{font-weight:bold}
+    :root{--bg:#0f172a;--card:#111827;--text:#e5e7eb;--muted:#94a3b8;--accent:#22d3ee}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    .wrap{max-width:860px;margin:28px auto;padding:16px}
+    h1{margin:0 0 10px}
+    p.muted{color:var(--muted)}
+    fieldset{border:1px solid #334155;border-radius:14px;margin:16px 0;padding:14px;background:var(--card)}
+    legend{padding:0 6px;color:var(--muted)}
     label{display:block;margin:8px 0 4px}
+    input,select,textarea{width:100%;padding:10px;border:1px solid #334155;border-radius:10px;background:#0b1220;color:var(--text)}
+    .inline label{display:inline-flex;gap:8px;align-items:center;margin-right:14px}
+    .row{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    button{background:var(--accent);color:#0b1220;border:none;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+    button:hover{opacity:.92}
+    .hint{color:var(--muted);font-size:.9rem}
   </style>
 </head>
 <body>
-  <h1>Test/Sınav Formu</h1>
+  <div class="wrap">
+    <h1>Basit Test / Sınav Formu</h1>
+    <p class="muted">Lütfen önce kimlik bilgilerinizi girin, sonra test bölümünü doldurun.</p>
 
-  <form action="#" method="post">
-    <!-- Aday bilgileri -->
-    <fieldset>
-      <legend>Aday Bilgileri</legend>
-      <label for="ad">Ad Soyad *</label>
-      <input id="ad" name="ad" type="text" required>
+    <!-- Aday Bilgileri -->
+    <form id="quiz" action="#" method="post">
+      <fieldset>
+        <legend>Aday Bilgileri</legend>
+        <div class="row">
+          <div>
+            <label for="adsoyad">Ad Soyad *</label>
+            <input id="adsoyad" name="adsoyad" type="text" required placeholder="Ad Soyad">
+          </div>
+          <div>
+            <label for="email">E-posta *</label>
+            <input id="email" name="email" type="email" required placeholder="ornek@posta.com">
+          </div>
+        </div>
+      </fieldset>
 
-      <label for="mail">E-posta *</label>
-      <input id="mail" name="mail" type="email" required>
-    </fieldset>
+      <!-- Test -->
+      <fieldset>
+        <legend>Test</legend>
 
-    <!-- Test soruları -->
-    <fieldset>
-      <legend>Test</legend>
+        <!-- S1: Text -->
+        <label for="s1">1) HTML’in bir kullanım alanını kısaca yazın.</label>
+        <input id="s1" name="s1" type="text" placeholder="Örn: web sayfası yapısını tanımlar">
 
-      <!-- S1: Kısa cevap (text) -->
-      <label for="s1">1) HTML'nin bir özelliğini yazın.</label>
-      <input id="s1" name="s1" type="text" placeholder="Kısa cevap">
+        <!-- S2: Checkbox (birden fazla) -->
+        <p>2) Aşağıdakilerden hangileri <b>CSS</b> ile ilgilidir? <span class="hint">(Birden fazla seçebilirsiniz)</span></p>
+        <div class="inline">
+          <label><input type="checkbox" name="s2" value="margin"> margin</label>
+          <label><input type="checkbox" name="s2" value="flex"> flex</label>
+          <label><input type="checkbox" name="s2" value="onclick"> onclick</label>
+          <label><input type="checkbox" name="s2" value="fetch"> fetch</label>
+        </div>
 
-      <!-- S2: Çoklu seçim (checkbox) -->
-      <p>2) Hangi programlama dillerini biliyorsunuz? <small>(Birden fazla seçebilirsiniz)</small></p>
-      <label><input type="checkbox" name="dil" value="HTML"> HTML</label>
-      <label><input type="checkbox" name="dil" value="CSS"> CSS</label>
-      <label><input type="checkbox" name="dil" value="JavaScript"> JavaScript</label>
+        <!-- S3: Radio (tek seçim) -->
+        <p>3) Hangi HTTP yöntemi URL’de veriyi gösterir? (tek seçim)</p>
+        <div class="inline">
+          <label><input type="radio" name="s3" value="GET"> GET</label>
+          <label><input type="radio" name="s3" value="POST"> POST</label>
+        </div>
 
-      <!-- S3: Tek seçim (radio) -->
-      <p>3) Hangi tarayıcıyı kullanıyorsunuz? <small>(Tek seçim)</small></p>
-      <label><input type="radio" name="tarayici" value="Chrome"> Chrome</label>
-      <label><input type="radio" name="tarayici" value="Firefox"> Firefox</label>
-      <label><input type="radio" name="tarayici" value="Safari"> Safari</label>
+        <!-- S4: Select (tek seçim) -->
+        <label for="s4">4) Görsel eklemek için kullanılan etiket hangisidir?</label>
+        <select id="s4" name="s4" required>
+          <option value="">Seçiniz</option>
+          <option>img</option>
+          <option>image</option>
+          <option>picture</option>
+        </select>
 
-      <!-- S4: Açıklama (textarea) -->
-      <label for="yorum">4) Yorumlarınız:</label>
-      <textarea id="yorum" name="yorum" rows="4" placeholder="İsteğe bağlı"></textarea>
-    </fieldset>
+        <!-- S5: Number -->
+        <label for="s5">5) HTML başlık etiketlerinin (h1–h?) sayısı kaçtır?</label>
+        <input id="s5" name="s5" type="number" min="1" max="10" placeholder="Sayı giriniz">
 
-    <button type="submit">Gönder</button>
-    <button type="reset">Temizle</button>
-  </form>
-</body>
-</html>
+        <!-- S6: Date -->
+        <label for="s6">6) Bugünkü tarihi seçiniz.</label>
+        <input id="s6" name="s6" type="date">
+
+        <!-- S7: Range -->
+        <label for="s7">7) Bu testin zorluğu sizce kaç? (0–10)</label>
+        <input id="s7" name="s7" ty
