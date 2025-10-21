@@ -86,4 +86,35 @@
 
         <!-- S7: Range -->
         <label for="s7">7) Bu testin zorluğu sizce kaç? (0–10)</label>
-        <input id="s7" name="s7" ty
+        <input id="s7" name="s7" type="range" min="0" max="10" value="5">
+
+        <!-- S8: Color (görsel tercih) -->
+        <label for="s8">8) Favori vurgulama renginizi seçin.</label>
+        <input id="s8" name="s8" type="color" value="#22d3ee">
+
+        <!-- S9: Textarea -->
+        <label for="s9">9) Yorumlarınız:</label>
+        <textarea id="s9" name="s9" rows="4" placeholder="İsteğe bağlı"></textarea>
+
+        <!-- S10: File (opsiyonel kanıt yükleme) -->
+        <label for="s10">10) (Opsiyonel) Ekran görüntüsü yükleyin.</label>
+        <input id="s10" name="s10" type="file" accept="image/*">
+      </fieldset>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <button type="submit">Gönder</button>
+        <button type="reset">Temizle</button>
+        <span id="mesaj" class="hint"></span>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Sadece geri bildirim için — sunucuya gönderim yok.
+    document.getElementById('quiz').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('mesaj').textContent = 'Form alındı. (Statik sayfa: veri sunucuya gönderilmez)';
+    });
+  </script>
+</body>
+</html>
