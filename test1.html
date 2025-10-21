@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Programcılığı – Test</title>
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#ffffff; --text:#111827; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    .wrap{max-width:900px;margin:28px auto;padding:16px}
+    h1{margin:0 0 8px}
+    .muted{color:var(--muted)}
+    fieldset{border:1px solid var(--border);border-radius:14px;background:var(--card);padding:16px;margin:16px 0}
+    legend{padding:0 8px;color:var(--muted)}
+    label{display:block;margin:8px 0 6px}
+    input,select,textarea{
+      width:100%;padding:10px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--text)
+    }
+    .inline{display:flex;flex-wrap:wrap;gap:12px}
+    .inline > label{display:inline-flex;gap:8px;align-items:center;margin:0}
+    .row{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    button{
+      background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer
+    }
+    button:hover{opacity:.95}
+    .note{font-size:.9rem;color:var(--muted)}
+    .ok{margin-left:8px;color:#059669;font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Web Programcılığı – Test</h1>
+    <p class="muted">Önce kimlik bilgilerini doldur, sonra testi işaretle. Sorular <b>A (genel web)</b> + <b>B (form/input)</b> karışımıdır.</p>
+
+    <form id="quiz" action="#" method="post" novalidate>
+      <!-- Aday bilgileri -->
+      <fieldset>
+        <legend>Aday Bilgileri</legend>
+        <div class="row">
+          <div>
+            <label for="adsoyad">Ad Soyad *</label>
+            <input id="adsoyad" name="adsoyad" type="text" required placeholder="Ad Soyad">
+          </div>
+          <div>
+            <label for="email">E-posta *</label>
+            <input id="email" name="email" type="email" required placeholder="ornek@posta.com">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Test -->
+      <fieldset>
+        <legend>Test</legend>
+
+        <!-- S1: Text (A) -->
+        <label for="s1">1) HTML’in temel amacı nedir? (kısa cevap)</label>
+        <input id="s1" name="s1" type="text" placeholder="Örn: sayfanın yapısını tanımlar">
+
+        <!-- S2: Radio (A) -->
+        <p>2) Hangi HTTP yöntemi genellikle <u>URL’de</u> veriyi gösterir?</p>
+        <div class="inline">
+          <label><input type="radio" name="s2" value="GET" required> GET</label>
+          <label><input type="radio" name="s2" value="POST"> POST</label>
+        </div>
+
+        <!-- S3: Checkbox (A) -->
+        <p>3) Aşağıdakilerden hangileri <b>CSS</b> kavramıdır? <span class="note">(Birden fazla seçilebilir)</span></p>
+        <div class="inline">
+          <label><input type="checkbox" name="s3" value="margin"> margin</label>
+          <label><input type="checkbox" name="s3" value="display"> display</label>
+          <label><input type="checkbox" name="s3" value="onclick"> onclick</label>
+          <label><input type="checkbox" name="s3" value="border"> border</label>
+        </div>
+
+        <!-- S4: Select + datalist (B: input bilgisi) -->
+        <label for="s4">4) Bir formda <u>tarih seçmek</u> için en uygun input türü hangisi?</label>
+        <select id="s4" name="s4" required>
+          <option value="">Seçiniz</option>
+          <option value="date">date</option>
+          <option value="time">time</option>
+          <option value="datetime-local">datetime-local</option>
+          <option value="text">text</option>
+        </select>
+
+        <!-- S5: Datalist (B: input bilgisi + kullanıcı deneyimi) -->
+        <label for="s5">5) Aşağıdan bir HTML başlık etiketi seçin (otomatik öneri):</label>
+        <input list="basliklar" id="s5" name="s5" placeholder="h1, h2, ...">
+        <datalist id="basliklar">
+          <option value="h1"><option value="h2"><option value="h3"><option value="h4"><option value="h5"><option value="h6">
+        </datalist>
+
+        <!-- S6: Number (A) -->
+        <label for="s6">6) HTML başlık etiketlerinin (h1–h?) toplam sayısı kaçtır?</label>
+        <input id="s6" name="s6" type="number" min="1" max="10" placeholder="Sayı giriniz">
+
+        <!-- S7: Range (B: kullanıcı özdeğerlendirme) -->
+        <label for="s7">7) Web/Form konularında seviyeniz (0–10):</label>
+        <input id="s7" name="s7" type="range" min="0" max="10" value="5">
+
+        <!-- S8: Textarea + File (B: farklı input) -->
+        <label for="s8">8) Yorumlarınız / notlarınız:</label>
+        <textarea id="s8" name="s8" rows="4" placeholder="İsteğe bağlı"></textarea>
+
+        <label for="s9">9) (Opsiyonel) Ekran görüntüsü / dosya yükleyin:</label>
+        <input id="s9" name="s9" type="file" accept="image/*">
+      </fieldset>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <button type="submit">Gönder</button>
+        <button type="reset">Temizle</button>
+        <span id="mesaj" class="ok"></span>
+      </div>
+      <p class="note">Not: Bu sayfa statiktir; veriler sunucuya gönderilmez. (GitHub Pages için uygundur.)</p>
+    </form>
+  </div>
+
+  <script>
+    // Basit geri bildirim
+    document.getElementById('quiz').addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!this.checkValidity()){
+        this.reportValidity();
+        return;
+      }
+      document.getElementById('mesaj').textContent = 'Yanıtlarınız alındı.';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
