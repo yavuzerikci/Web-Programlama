@@ -12,7 +12,6 @@
     body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
     .wrap{max-width:900px;margin:28px auto;padding:16px}
     h1{margin:0 0 8px}
-    .muted{color:var(--muted)}
     fieldset{border:1px solid var(--border);border-radius:14px;background:var(--card);padding:16px;margin:16px 0}
     legend{padding:0 8px;color:var(--muted)}
     label{display:block;margin:8px 0 6px}
@@ -33,7 +32,6 @@
 <body>
   <div class="wrap">
     <h1>Web Programcılığı – Test</h1>
-    <p class="muted">Önce kimlik bilgilerini doldur, sonra testi işaretle. Sorular <b>A (genel web)</b> + <b>B (form/input)</b> karışımıdır.</p>
 
     <form id="quiz" action="#" method="post" novalidate>
       <!-- Aday bilgileri -->
@@ -76,7 +74,7 @@
         </div>
 
         <!-- S4: Select + datalist (B: input bilgisi) -->
-        <label for="s4">4) Bir formda <u>tarih seçmek</u> için en uygun input türü hangisi?</label>
+        <label for="s4">4) Bir formda <u>tarih seçmek</u> için en uygun input türü hangisidir?</label>
         <select id="s4" name="s4" required>
           <option value="">Seçiniz</option>
           <option value="date">date</option>
@@ -100,12 +98,9 @@
         <label for="s7">7) Web/Form konularında seviyeniz (0–10):</label>
         <input id="s7" name="s7" type="range" min="0" max="10" value="5">
 
-        <!-- S8: Textarea + File (B: farklı input) -->
+        <!-- S8: Textarea -->
         <label for="s8">8) Yorumlarınız / notlarınız:</label>
         <textarea id="s8" name="s8" rows="4" placeholder="İsteğe bağlı"></textarea>
-
-        <label for="s9">9) (Opsiyonel) Ekran görüntüsü / dosya yükleyin:</label>
-        <input id="s9" name="s9" type="file" accept="image/*">
       </fieldset>
 
       <div style="display:flex;gap:10px;align-items:center">
@@ -113,7 +108,6 @@
         <button type="reset">Temizle</button>
         <span id="mesaj" class="ok"></span>
       </div>
-      <p class="note">Not: Bu sayfa statiktir; veriler sunucuya gönderilmez. (GitHub Pages için uygundur.)</p>
     </form>
   </div>
 
