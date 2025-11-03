@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Görevi - Daireler</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 40px auto;
+        }
+
+        /* Ortak özellikler – üç div de daire olsun */
+        .circle {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        /* 3 tane div kullanıyoruz */
+        .circle1 {
+            background-color: #ff8a65;  /* turuncu ton */
+            top: 60px;
+            left: 40px;
+        }
+
+        .circle2 {
+            background-color: #4fc3f7;  /* mavi ton */
+            top: 60px;
+            left: 140px;
+        }
+
+        .circle3 {
+            background-color: #fff176;  /* sarı ton */
+            top: 130px;
+            left: 90px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lab Görevi - Daireler</h1>
+    <p>Bu şekilde 3 tane &lt;div&gt; ile kesişen daireler oluşturuldu.</p>
+
+    <div class="container">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+
+</body>
+</html>
