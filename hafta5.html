@@ -4,90 +4,65 @@
   <meta charset="UTF-8">
   <title>Hafta 5 – CSS Görevi</title>
 
-  <!-- External CSS bağlantısı -->
-  <link rel="stylesheet" href="style.css">
+  <!-- 3. tablo için EXTERNAL CSS -->
+  <link rel="stylesheet" href="stil.css">
 
   <style>
-    /* INTERNAL CSS */
-    table.internal {
-      border-collapse: collapse;
-      width: 60%;
-      margin: 20px auto;
-      background-color: #f0f8ff;
+    /* 2. tablo için INTERNAL CSS */
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #f4f4f5;
+      margin: 0;
     }
-    table.internal th, table.internal td {
-      border: 1px solid #888;
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    .aciklama {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4b5563;
+    }
+
+    table.internal-table {
+      border-collapse: collapse;
+      width: 70%;
+      margin: 16px auto;
+      background: #eff6ff;
+    }
+
+    table.internal-table th,
+    table.internal-table td {
+      border: 1px solid #1d4ed8;
       padding: 8px;
       text-align: center;
     }
-    table.internal th {
-      background-color: #a6c8ff;
+
+    table.internal-table th {
+      background: #1d4ed8;
+      color: #fff;
     }
 
-    /* GÖREV 2 – Daireler */
-    .circles {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 40px;
-      gap: 30px;
+    /* GÖREV 2 – daireler */
+    .circle-wrapper {
+      position: relative;
+      width: 260px;
+      height: 160px;
+      margin: 40px auto;
     }
+
     .circle {
-      width: 100px;
-      height: 100px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
+      position: absolute;
       opacity: 0.8;
     }
-    .c1 { background-color: #ff5959; }
-    .c2 { background-color: #ffdd59; }
-    .c3 { background-color: #4b7bec; }
+
+    .circle1 { background: #f97316; left: 0;   top: 20px; }
+    .circle2 { background: #facc15; left: 60px; top: 0; }
+    .circle3 { background: #6366f1; left: 120px; top: 25px; }
   </style>
 </head>
-<body>
-  <h1 style="text-align:center;">Hafta 5 – CSS Görevleri</h1>
-
-  <h2>Görev 1 – Inline, Internal ve External CSS</h2>
-
-  <!-- 1️⃣ Inline CSS -->
-  <h3>1. Inline CSS</h3>
-  <table style="border-collapse:collapse;width:60%;margin:auto;background-color:#ffe4e1;">
-    <tr>
-      <th style="border:1px solid #888;padding:8px;background-color:#ff7f7f;">Gün</th>
-      <th style="border:1px solid #888;padding:8px;background-color:#ff7f7f;">Ders</th>
-    </tr>
-    <tr>
-      <td style="border:1px solid #888;padding:8px;">Pazartesi</td>
-      <td style="border:1px solid #888;padding:8px;">Web Programlama</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #888;padding:8px;">Salı</td>
-      <td style="border:1px solid #888;padding:8px;">Veri Tabanı</td>
-    </tr>
-  </table>
-
-  <!-- 2️⃣ Internal CSS -->
-  <h3>2. Internal CSS</h3>
-  <table class="internal">
-    <tr><th>Gün</th><th>Ders</th></tr>
-    <tr><td>Çarşamba</td><td>Mobil Programlama</td></tr>
-    <tr><td>Perşembe</td><td>Fiziksel Programlama</td></tr>
-  </table>
-
-  <!-- 3️⃣ External CSS -->
-  <h3>3. External CSS</h3>
-  <table class="external">
-    <tr><th>Gün</th><th>Ders</th></tr>
-    <tr><td>Cuma</td><td>Enformasyon Tasarımı</td></tr>
-    <tr><td>Cumartesi</td><td>Bilim Tarihi ve Felsefesi</td></tr>
-  </table>
-
-  <hr style="margin:40px 0;">
-
-  <h2>Görev 2 – CSS ile Daireler</h2>
-  <div class="circles">
-    <div class="circle c1"></div>
-    <div class="circle c2"></div>
-    <div class="circle c3"></div>
-  </div>
-</body>
-</html>
+<bod
