@@ -1,0 +1,15 @@
+/* EXTERNAL CSS */
+table.external {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 20px auto;
+  background-color: #eaffea;
+}
+table.external th, table.external td {
+  border: 1px solid #666;
+  padding: 8px;
+  text-align: center;
+}
+table.external th {
+  background-color: #7fd97f;
+}
