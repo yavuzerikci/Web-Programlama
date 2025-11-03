@@ -1,21 +1,30 @@
-/* 3. tablo – External CSS örneği */
-table.external{
-  border-collapse:collapse;
-  width:70%;
-  margin:20px auto;
-  background:#ecfdf5;
-  font-family:Segoe UI, sans-serif;
-  color:#064e3b;
+/* EXTERNAL CSS (3. tablo) */
+.external-table {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: #ecfdf5;
+  border: 3px solid #059669;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-table.external th, table.external td{
-  border:2px solid #059669;
-  padding:10px;
-  text-align:center;
+.external-table th {
+  background: linear-gradient(#16a34a, #047857);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
 }
-table.external th{
-  background:#10b981;
-  color:white;
+.external-table td {
+  padding: 10px;
+  text-align: right;
+  border-bottom: 1px dashed #059669;
+  color: #064e3b;
 }
-table.external tr:nth-child(even){
-  background:#d1fae5;
+.external-table tr:nth-child(even) {
+  background-color: #d1fae5;
+}
+.external-table tr:hover {
+  background-color: #bbf7d0;
 }
