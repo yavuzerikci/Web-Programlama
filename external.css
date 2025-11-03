@@ -1,0 +1,27 @@
+/* external.css — 3. tablo için (farklı yerleşim ve stil) */
+.table-external {
+  width: 80%;
+  margin: 12px auto 28px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f0fff4;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.table-external th {
+  background: linear-gradient(180deg,#10b981,#059669);
+  color: #fff;
+  padding: 12px 14px;
+  text-align: left;
+}
+.table-external td {
+  padding: 10px 14px;
+  border-bottom: 1px dashed rgba(5,150,105,0.15);
+  text-align: left;
+  color: #064e3b;
+}
+.table-external tr:nth-child(even) {
+  background: #dcfce7;
+}
