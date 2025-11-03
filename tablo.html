@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Görevi - Tablo</title>
+
+    <!-- INTERNAL CSS – 2. tablo için -->
+    <style>
+        /* 2. TABLO: INTERNAL CSS ÖRNEĞİ */
+        table.internal-table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table.internal-table th,
+        table.internal-table td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table.internal-table th {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        table.internal-table caption {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+    </style>
+
+    <!-- EXTERNAL CSS – 3. tablo için -->
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+
+    <h1 style="text-align: center;">Lab Görevi - Tablo Örneği</h1>
+
+    <!-- 1. TABLO: INLINE CSS -->
+    <h2 style="text-align:center;">1. Kopya - Inline CSS</h2>
+
+    <table
+        style="
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+            font-family: Arial, Helvetica, sans-serif;
+        ">
+        <caption style="font-weight: bold; margin-bottom: 8px;">
+            Haftalık Ders Programı (Inline)
+        </caption>
+        <tr>
+            <th style="border:1px solid #333; padding:8px; background-color:#f1f1f1;">Gün</th>
+            <th style="border:1px solid #333; padding:8px; background-color:#f1f1f1;">09:00 - 11:00</th>
+            <th style="border:1px solid #333; padding:8px; background-color:#f1f1f1;">11:00 - 13:00</th>
+        </tr>
+        <tr>
+            <td style="border:1px solid #333; padding:8px;">Pazartesi</td>
+            <td style="border:1px solid #333; padding:8px;">Web Programlama</td>
+            <td style="border:1px solid #333; padding:8px;">VTYS</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #333; padding:8px;">Salı</td>
+            <td style="border:1px solid #333; padding:8px;">Mobil Programlama</td>
+            <td style="border:1px solid #333; padding:8px;">İşletim Sistemleri</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #333; padding:8px;">Çarşamba</td>
+            <td style="border:1px solid #333; padding:8px;">Karşılaştırmalı Eğitim</td>
+            <td style="border:1px solid #333; padding:8px;">Enformasyon Tasarımı</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #333; padding:8px;">Perşembe</td>
+            <td style="border:1px solid #333; padding:8px;">Fiziksel Programlama</td>
+            <td style="border:1px solid #333; padding:8px;">Rehberlik</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #333; padding:8px;">Cuma</td>
+            <td style="border:1px solid #333; padding:8px;">Topluma Hizmet</td>
+            <td style="border:1px solid #333; padding:8px;">Seçmeli Ders</td>
+        </tr>
+    </table>
+
+
+    <!-- 2. TABLO: INTERNAL CSS -->
+    <h2 style="text-align:center;">2. Kopya - Internal CSS</h2>
+
+    <table class="internal-table">
+        <caption>Haftalık Ders Programı (Internal)</caption>
+        <tr>
+            <th>Gün</th>
+            <th>09:00 - 11:00</th>
+            <th>11:00 - 13:00</th>
+        </tr>
+        <tr>
+            <td>Pazartesi</td>
+            <td>Web Programlama</td>
+            <td>VTYS</td>
+        </tr>
+        <tr>
+            <td>Salı</td>
+            <td>Mobil Programlama</td>
+            <td>İşletim Sistemleri</td>
+        </tr>
+        <tr>
+            <td>Çarşamba</td>
+            <td>Karşılaştırmalı Eğitim</td>
+            <td>Enformasyon Tasarımı</td>
+        </tr>
+        <tr>
+            <td>Perşembe</td>
+            <td>Fiziksel Programlama</td>
+            <td>Rehberlik</td>
+        </tr>
+        <tr>
+            <td>Cuma</td>
+            <td>Topluma Hizmet</td>
+            <td>Seçmeli Ders</td>
+        </tr>
+    </table>
+
+
+    <!-- 3. TABLO: EXTERNAL CSS -->
+    <h2 style="text-align:center;">3. Kopya - External CSS</h2>
+
+    <table class="external-table">
+        <caption>Haftalık Ders Programı (External)</caption>
+        <tr>
+            <th>Gün</th>
+            <th>09:00 - 11:00</th>
+            <th>11:00 - 13:00</th>
+        </tr>
+        <tr>
+            <td>Pazartesi</td>
+            <td>Web Programlama</td>
+            <td>VTYS</td>
+        </tr>
+        <tr>
+            <td>Salı</td>
+            <td>Mobil Programlama</td>
+            <td>İşletim Sistemleri</td>
+        </tr>
+        <tr>
+            <td>Çarşamba</td>
+            <td>Karşılaştırmalı Eğitim</td>
+            <td>Enformasyon Tasarımı</td>
+        </tr>
+        <tr>
+            <td>Perşembe</td>
+            <td>Fiziksel Programlama</td>
+            <td>Rehberlik</td>
+        </tr>
+        <tr>
+            <td>Cuma</td>
+            <td>Topluma Hizmet</td>
+            <td>Seçmeli Ders</td>
+        </tr>
+    </table>
+
+</body>
+</html>
