@@ -1,15 +1,25 @@
-/* EXTERNAL CSS */
-table.external {
+/* EXTERNAL CSS – 3. tablo için */
+
+table.external-table {
   border-collapse: collapse;
-  width: 60%;
-  margin: 20px auto;
-  background-color: #eaffea;
+  width: 70%;
+  margin: 16px auto;
+  background: #ecfdf3;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
-table.external th, table.external td {
-  border: 1px solid #666;
+
+table.external-table th,
+table.external-table td {
+  border: 1px solid #16a34a;
   padding: 8px;
   text-align: center;
 }
-table.external th {
-  background-color: #7fd97f;
+
+table.external-table th {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+table.external-table tr:nth-child(even) {
+  background: #dcfce7;
 }
