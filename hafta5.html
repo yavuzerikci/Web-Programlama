@@ -3,78 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <title>Hafta 5 – CSS Görevi</title>
-<link rel="stylesheet" href="stil.css"><!-- external css -->
+<link rel="stylesheet" href="stil.css">
 <style>
-/* 2. tablo: Internal CSS */
-body{font-family:Segoe UI, sans-serif;background:#f9fafb;margin:0}
-h1,h2{text-align:center}
-table.internal{
-  border-collapse:collapse;
-  width:70%;
-  margin:20px auto;
-  background:#e0f2fe;
-  color:#0c4a6e;
+/* 2️⃣ INTERNAL CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
 }
-table.internal th, table.internal td{
-  border:2px solid #0369a1;
-  padding:10px;
-  text-align:center;
+h1, h2, h3 {
+  text-align: center;
 }
-table.internal th{background:#0284c7;color:#fff}
-.circle-wrap{display:flex;justify-content:center;gap:40px;margin:40px 0}
-.circle{width:100px;height:100px;border-radius:50%}
-.kirmizi{background:#ef4444}
-.sari{background:#facc15}
-.mavi{background:#3b82f6}
+.table-internal {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.table-internal th {
+  background: #1d4ed8;
+  color: #fff;
+  padding: 10px;
+}
+.table-internal td {
+  border: 1px solid #1d4ed8;
+  padding: 10px;
+  text-align: center;
+}
+.table-internal tr:nth-child(even) {
+  background-color: #dbeafe;
+}
+
+/* Görev 2 - Daireler */
+.da-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0;
+}
+.daire {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.kirmizi { background: #ef4444; }
+.sari { background: #facc15; }
+.yesil { background: #22c55e; }
 </style>
 </head>
 <body>
-<h1>Hafta 5 – CSS Görevleri</h1>
-<h2>Görev 1 – Üç Farklı CSS Yöntemi</h2>
+
+<h1>Hafta 5 – CSS Görevi</h1>
+<p style="text-align:center;color:#4b5563">Görev 1: Aynı tabloyu üç farklı CSS yöntemiyle biçimlendirin.<br>Görev 2: 3 daireyi yalnızca CSS ile oluşturun.</p>
 
 <!-- 1️⃣ INLINE CSS -->
-<h3 style="text-align:center;">1. Inline CSS</h3>
-<table style="border-collapse:collapse;width:70%;margin:0 auto;background:#fee2e2;color:#991b1b;">
+<h3>1. INLINE CSS</h3>
+<table style="width:70%;margin:auto;border-collapse:collapse;font-family:'Courier New',monospace;background:#fff0f0;">
   <tr>
-    <th style="border:2px solid #b91c1c;padding:10px;background:#f87171;">Gün</th>
-    <th style="border:2px solid #b91c1c;padding:10px;background:#f87171;">Saat</th>
-    <th style="border:2px solid #b91c1c;padding:10px;background:#f87171;">Ders</th>
+    <th style="background:#b91c1c;color:white;padding:8px;border:2px solid #7f1d1d;">Gün</th>
+    <th style="background:#b91c1c;color:white;padding:8px;border:2px solid #7f1d1d;">Saat</th>
+    <th style="background:#b91c1c;color:white;padding:8px;border:2px solid #7f1d1d;">Ders</th>
   </tr>
   <tr>
-    <td style="border:2px solid #b91c1c;padding:8px;">Pazartesi</td>
-    <td style="border:2px solid #b91c1c;padding:8px;">09:00</td>
-    <td style="border:2px solid #b91c1c;padding:8px;">Web Programlama</td>
+    <td style="border:1px solid #7f1d1d;padding:8px;">Pazartesi</td>
+    <td style="border:1px solid #7f1d1d;padding:8px;">09:00</td>
+    <td style="border:1px solid #7f1d1d;padding:8px;">Web Programlama</td>
   </tr>
   <tr>
-    <td style="border:2px solid #b91c1c;padding:8px;">Salı</td>
-    <td style="border:2px solid #b91c1c;padding:8px;">10:00</td>
-    <td style="border:2px solid #b91c1c;padding:8px;">Veri Tabanı</td>
+    <td style="border:1px solid #7f1d1d;padding:8px;">Salı</td>
+    <td style="border:1px solid #7f1d1d;padding:8px;">10:00</td>
+    <td style="border:1px solid #7f1d1d;padding:8px;">Veri Tabanı</td>
   </tr>
 </table>
 
 <!-- 2️⃣ INTERNAL CSS -->
-<h3 style="text-align:center;">2. Internal CSS</h3>
-<table class="internal">
-  <tr><th>Gün</th><th>Saat</th><th>Ders</th></tr>
-  <tr><td>Çarşamba</td><td>11:00</td><td>Mobil Programlama</td></tr>
-  <tr><td>Perşembe</td><td>13:00</td><td>Fiziksel Programlama</td></tr>
+<h3>2. INTERNAL CSS</h3>
+<table class="table-internal">
+  <tr>
+    <th>Gün</th>
+    <th>Saat</th>
+    <th>Ders</th>
+  </tr>
+  <tr>
+    <td>Pazartesi</td>
+    <td>09:00</td>
+    <td>Web Programlama</td>
+  </tr>
+  <tr>
+    <td>Salı</td>
+    <td>10:00</td>
+    <td>Veri Tabanı</td>
+  </tr>
 </table>
 
 <!-- 3️⃣ EXTERNAL CSS -->
-<h3 style="text-align:center;">3. External CSS</h3>
-<table class="external">
-  <tr><th>Gün</th><th>Saat</th><th>Ders</th></tr>
-  <tr><td>Cuma</td><td>14:00</td><td>Enformasyon Tasarımı</td></tr>
-  <tr><td>Cumartesi</td><td>15:00</td><td>Bilim Tarihi</td></tr>
+<h3>3. EXTERNAL CSS</h3>
+<table class="external-table">
+  <tr>
+    <th>Gün</th>
+    <th>Saat</th>
+    <th>Ders</th>
+  </tr>
+  <tr>
+    <td>Pazartesi</td>
+    <td>09:00</td>
+    <td>Web Programlama</td>
+  </tr>
+  <tr>
+    <td>Salı</td>
+    <td>10:00</td>
+    <td>Veri Tabanı</td>
+  </tr>
 </table>
 
-<hr style="margin:40px 0">
+<hr style="margin:40px 0;">
 
 <h2>Görev 2 – CSS ile Daireler</h2>
-<div class="circle-wrap">
-  <div class="circle kirmizi"></div>
-  <div class="circle sari"></div>
-  <div class="circle mavi"></div>
+<div class="da-wrap">
+  <div class="daire kirmizi"></div>
+  <div class="daire sari"></div>
+  <div class="daire yesil"></div>
 </div>
+
 </body>
 </html>
