@@ -1,114 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Hafta 5 – CSS Görevi</title>
-<link rel="stylesheet" href="stil.css">
-<style>
-/* INTERNAL CSS (2. tablo) */
-body {
-  font-family: Arial, sans-serif;
-  background: #f3f4f6;
-  margin: 0;
-}
-h1, h2, h3 { text-align: center; }
+  <meta charset="utf-8">
+  <title>Hafta 5 - CSS farkları (Inline / Internal / External)</title>
 
-.table-internal {
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 70%;
-  margin: 20px auto;
-  border: 3px solid #1d4ed8;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.table-internal th {
-  background: linear-gradient(#2563eb, #1e40af);
-  color: white;
-  padding: 12px;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-.table-internal td {
-  padding: 10px;
-  border-bottom: 1px solid #bfdbfe;
-  background: #eff6ff;
-  text-align: left;
-}
-.table-internal tr:nth-child(even) td {
-  background: #dbeafe;
-}
-.table-internal tr:hover td {
-  background: #c7d2fe;
-}
+  <!-- EXTERNAL CSS dosyası (3. tablo buradan stil alır) -->
+  <link rel="stylesheet" href="external.css">
 
-/* Görev 2: Daireler */
-.daireler {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
-}
-.daire {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-.kirmizi { background: #ef4444; }
-.sari { background: #facc15; }
-.yesil { background: #22c55e; }
-</style>
+  <!-- INTERNAL CSS (2. tablo buradan stil alır) -->
+  <style>
+    /* Internal CSS örneği - sadece .table-internal için */
+    table.table-internal {
+      width: 80%;
+      margin: 18px auto;
+      border-collapse: collapse;
+      font-family: "Arial", sans-serif;
+      background: #e8f4ff;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    table.table-internal th {
+      background: #0b63d3;
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+    table.table-internal td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(11,99,211,0.15);
+    }
+  </style>
 </head>
-<body>
-<h1>Hafta 5 – CSS Görevi</h1>
-<p style="text-align:center;color:#4b5563">
-Görev 1: Aynı tabloyu üç farklı CSS yöntemiyle biçimlendirin.<br>
-Görev 2: 3 daireyi yalnızca CSS ile oluşturun.
-</p>
+<body style="font-family:system-ui,Segoe UI,Roboto,Arial;margin:0;padding:24px;background:#f6f7fb;">
 
-<!-- 1️⃣ INLINE CSS -->
-<h3>1. INLINE CSS</h3>
-<table style="width:70%;margin:auto;border-collapse:collapse;background:#fff0f0;font-family:'Courier New',monospace;text-align:center;">
-  <tr>
-    <th style="border:2px solid #b91c1c;background:#7f1d1d;color:white;padding:10px;">Gün</th>
-    <th style="border:2px solid #b91c1c;background:#7f1d1d;color:white;padding:10px;">Saat</th>
-    <th style="border:2px solid #b91c1c;background:#7f1d1d;color:white;padding:10px;">Ders</th>
-  </tr>
-  <tr>
-    <td style="border:1px solid #7f1d1d;padding:8px;">Pazartesi</td>
-    <td style="border:1px solid #7f1d1d;padding:8px;">09:00</td>
-    <td style="border:1px solid #7f1d1d;padding:8px;">Web Programlama</td>
-  </tr>
-  <tr style="background:#ffe4e6;">
-    <td style="border:1px solid #7f1d1d;padding:8px;">Salı</td>
-    <td style="border:1px solid #7f1d1d;padding:8px;">10:00</td>
-    <td style="border:1px solid #7f1d1d;padding:8px;">Veri Tabanı</td>
-  </tr>
-</table>
+  <h1 style="text-align:center;margin-bottom:4px;">Hafta 5 — CSS Yöntemleri</h1>
+  <p style="text-align:center;margin-top:0;color:#444;">Aynı veri → 3 tablo. Sadece CSS'in **yazıldığı yer** farklı.</p>
 
-<!-- 2️⃣ INTERNAL CSS -->
-<h3>2. INTERNAL CSS</h3>
-<table class="table-internal">
-  <tr><th>Gün</th><th>Saat</th><th>Ders</th></tr>
-  <tr><td>Pazartesi</td><td>09:00</td><td>Web Programlama</td></tr>
-  <tr><td>Salı</td><td>10:00</td><td>Veri Tabanı</td></tr>
-</table>
+  <!-- 1) INLINE CSS -->
+  <h2 style="text-align:center;margin-top:28px">1) INLINE CSS (stil doğrudan etikette)</h2>
+  <table style="width:80%;margin:8px auto;border-collapse:collapse;background:#fff6f6;font-family:'Courier New',monospace;">
+    <tr>
+      <th style="background:#be1e2d;color:#fff;padding:8px;border:2px solid #8f151b;">Gün</th>
+      <th style="background:#be1e2d;color:#fff;padding:8px;border:2px solid #8f151b;">Saat</th>
+      <th style="background:#be1e2d;color:#fff;padding:8px;border:2px solid #8f151b;">Ders</th>
+    </tr>
+    <tr>
+      <td style="padding:8px;border:1px solid #8f151b;">Pazartesi</td>
+      <td style="padding:8px;border:1px solid #8f151b;">09:00</td>
+      <td style="padding:8px;border:1px solid #8f151b;">Web Programlama</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;border:1px solid #8f151b;">Salı</td>
+      <td style="padding:8px;border:1px solid #8f151b;">10:00</td>
+      <td style="padding:8px;border:1px solid #8f151b;">Veri Tabanı</td>
+    </tr>
+  </table>
 
-<!-- 3️⃣ EXTERNAL CSS -->
-<h3>3. EXTERNAL CSS</h3>
-<table class="external-table">
-  <tr><th>Gün</th><th>Saat</th><th>Ders</th></tr>
-  <tr><td>Pazartesi</td><td>09:00</td><td>Web Programlama</td></tr>
-  <tr><td>Salı</td><td>10:00</td><td>Veri Tabanı</td></tr>
-</table>
+  <!-- 2) INTERNAL CSS -->
+  <h2 style="text-align:center;margin-top:28px">2) INTERNAL CSS ( &lt;style&gt; içinde tanımlı )</h2>
+  <table class="table-internal" aria-label="internal">
+    <tr><th>Gün</th><th>Saat</th><th>Ders</th></tr>
+    <tr><td>Pazartesi</td><td>09:00</td><td>Web Programlama</td></tr>
+    <tr><td>Salı</td><td>10:00</td><td>Veri Tabanı</td></tr>
+  </table>
 
-<hr style="margin:40px 0">
+  <!-- 3) EXTERNAL CSS -->
+  <h2 style="text-align:center;margin-top:28px">3) EXTERNAL CSS (harici dosyadan stil alır)</h2>
+  <table class="table-external" aria-label="external" >
+    <tr><th>Gün</th><th>Saat</th><th>Ders</th></tr>
+    <tr><td>Pazartesi</td><td>09:00</td><td>Web Programlama</td></tr>
+    <tr><td>Salı</td><td>10:00</td><td>Veri Tabanı</td></tr>
+  </table>
 
-<h2>Görev 2 – CSS ile Daireler</h2>
-<div class="daireler">
-  <div class="daire kirmizi"></div>
-  <div class="daire sari"></div>
-  <div class="daire yesil"></div>
-</div>
+  <hr style="margin:40px 0;border:none;border-top:1px solid #e6e6e6;">
+
+  <!-- Görev 2: aynı daireler -->
+  <h2 style="text-align:center">Görev 2 — 3 Daire (CSS ile)</h2>
+  <div style="display:flex;gap:28px;justify-content:center;margin-top:18px;">
+    <div style="width:90px;height:90px;border-radius:50%;background:#ef5350;"></div>
+    <div style="width:90px;height:90px;border-radius:50%;background:#ffd54f;"></div>
+    <div style="width:90px;height:90px;border-radius:50%;background:#66bb6a;"></div>
+  </div>
+
 </body>
 </html>
