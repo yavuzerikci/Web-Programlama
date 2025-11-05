@@ -1,115 +1,114 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Hacettepe BÖTE</title>
+<meta charset="UTF-8">
+<title>Hacettepe BÖTE</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-        }
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f5f5;
+        overflow: hidden;
+    }
 
-        /* Ortadaki alan */
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+    .hero {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
 
-        /* Kırmızı kutuların durduğu alan */
-        .rect-wrapper {
-            position: absolute;
-            width: 80%;
-            max-width: 900px;
-            height: 260px;
-        }
+    .rect-wrapper {
+        position: absolute;
+        width: 80%;
+        max-width: 900px;
+        height: 260px;
+    }
 
-        /* Tüm kutular için ortak stil */
-        .rect {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 0, 0, 0.30);
-            border-radius: 6px;
-        }
+    .rect {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 0, 0, 0.3);
+        border-radius: 8px;
+        animation: float 6s ease-in-out infinite;
+    }
 
-        /* Her bir div’in yeri biraz farklı – sayıyı artırıp azaltabilirsin */
-        .rect1 { transform: translateX(-260px); }
-        .rect2 { transform: translateX(-210px); }
-        .rect3 { transform: translateX(-160px); }
-        .rect4 { transform: translateX(-110px); }
-        .rect5 { transform: translateX(-60px); }
-        .rect6 { transform: translateX(-10px); }
-        .rect7 { transform: translateX(40px); }
-        .rect8 { transform: translateX(90px); }
-        .rect9 { transform: translateX(140px); }
-        .rect10 { transform: translateX(190px); }
+    /* Her birinin hareketi farklı olsun */
+    .rect1 { animation-delay: 0s; }
+    .rect2 { animation-delay: 0.5s; }
+    .rect3 { animation-delay: 1s; }
+    .rect4 { animation-delay: 1.5s; }
+    .rect5 { animation-delay: 2s; }
+    .rect6 { animation-delay: 2.5s; }
+    .rect7 { animation-delay: 3s; }
+    .rect8 { animation-delay: 3.5s; }
+    .rect9 { animation-delay: 4s; }
+    .rect10 { animation-delay: 4.5s; }
 
-        /* Yazıların olduğu kısım */
-        .content {
-            position: relative;
-            text-align: center;
-            color: #fff;
-            z-index: 5; /* kutuların üstünde olsun */
-        }
+    /* Animasyon tanımı */
+    @keyframes float {
+        0%   { transform: translate(0, 0) rotate(0deg); opacity: 0.25; }
+        25%  { transform: translate(-15px, -10px) rotate(2deg); opacity: 0.35; }
+        50%  { transform: translate(10px, 10px) rotate(-3deg); opacity: 0.4; }
+        75%  { transform: translate(-5px, 15px) rotate(1deg); opacity: 0.3; }
+        100% { transform: translate(0, 0) rotate(0deg); opacity: 0.25; }
+    }
 
-        .content h1 {
-            font-size: 64px;
-            margin: 0 10px 10px;
-            font-weight: 700;
-        }
+    .content {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        z-index: 5;
+        text-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
 
-        .content p {
-            font-size: 20px;
-            margin: 0 10px;
-        }
+    .content h1 {
+        font-size: 64px;
+        margin: 0 10px 10px;
+        font-weight: 700;
+    }
 
-        /* Küçük ekranlar için biraz küçültme */
-        @media (max-width: 768px) {
-            .rect-wrapper {
-                height: 220px;
-            }
-            .content h1 {
-                font-size: 40px;
-            }
-            .content p {
-                font-size: 16px;
-            }
-        }
-    </style>
+    .content p {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+        .rect-wrapper { height: 220px; }
+        .content h1 { font-size: 40px; }
+        .content p { font-size: 16px; }
+    }
+</style>
 </head>
 <body>
 
-    <div class="hero">
-        <!-- Çok sayıda div ile arka plan efekti -->
-        <div class="rect-wrapper">
-            <div class="rect rect1"></div>
-            <div class="rect rect2"></div>
-            <div class="rect rect3"></div>
-            <div class="rect rect4"></div>
-            <div class="rect rect5"></div>
-            <div class="rect rect6"></div>
-            <div class="rect rect7"></div>
-            <div class="rect rect8"></div>
-            <div class="rect rect9"></div>
-            <div class="rect rect10"></div>
-        </div>
-
-        <!-- Ortadaki yazılar -->
-        <div class="content">
-            <h1>Hacettepe BÖTE</h1>
-            <p>Öğretim teknolojileri ve bilişim teknolojileri eğitimi için en iyi adres.</p>
-        </div>
+<div class="hero">
+    <div class="rect-wrapper">
+        <div class="rect rect1"></div>
+        <div class="rect rect2"></div>
+        <div class="rect rect3"></div>
+        <div class="rect rect4"></div>
+        <div class="rect rect5"></div>
+        <div class="rect rect6"></div>
+        <div class="rect rect7"></div>
+        <div class="rect rect8"></div>
+        <div class="rect rect9"></div>
+        <div class="rect rect10"></div>
     </div>
+
+    <div class="content">
+        <h1>Hacettepe BÖTE</h1>
+        <p>Öğretim teknolojileri ve bilişim teknolojileri eğitimi için en iyi adres.</p>
+    </div>
+</div>
 
 </body>
 </html>
