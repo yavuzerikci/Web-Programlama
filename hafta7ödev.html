@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hacettepe BÖTE - Hareketli Arka Plan</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        height: 100vh;
+        background: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero {
+        position: relative;
+        width: 85%;
+        max-width: 1000px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Kutular (üst üste binmiş div’ler) */
+    .rect {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 0, 0, 0.28);
+        border-radius: 8px;
+        animation: hareket 8s ease-in-out infinite;
+    }
+
+    /* Her birinin farklı zamanlama ve yönü */
+    .rect1 { animation-delay: 0s; transform-origin: center; }
+    .rect2 { animation-delay: 1s; transform-origin: top left; }
+    .rect3 { animation-delay: 2s; transform-origin: bottom right; }
+    .rect4 { animation-delay: 3s; transform-origin: top right; }
+    .rect5 { animation-delay: 4s; transform-origin: bottom left; }
+    .rect6 { animation-delay: 5s; transform-origin: center; }
+    .rect7 { animation-delay: 6s; transform-origin: center; }
+    .rect8 { animation-delay: 7s; transform-origin: center; }
+
+    /* Animasyon - daha geniş salınımlar, dönüşler ve kaymalar */
+    @keyframes hareket {
+        0% {
+            transform: translate(0px, 0px) scale(1) rotate(0deg);
+            opacity: 0.25;
+        }
+        20% {
+            transform: translate(-60px, -40px) scale(1.1) rotate(5deg);
+            opacity: 0.35;
+        }
+        40% {
+            transform: translate(80px, 60px) scale(1.2) rotate(-8deg);
+            opacity: 0.4;
+        }
+        60% {
+            transform: translate(-100px, 80px) scale(1.05) rotate(10deg);
+            opacity: 0.3;
+        }
+        80% {
+            transform: translate(60px, -70px) scale(1.15) rotate(-6deg);
+            opacity: 0.35;
+        }
+        100% {
+            transform: translate(0px, 0px) scale(1) rotate(0deg);
+            opacity: 0.25;
+        }
+    }
+
+    /* Yazılar */
+    .content {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        z-index: 5;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .content h1 {
+        font-size: 68px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .content p {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    /* Renkli degrade arka plan efekti */
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, #ff1744, #d500f9);
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    @media (max-width: 76
