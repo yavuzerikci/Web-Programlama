@@ -2,38 +2,83 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Renk Değişimi Örneği</title>
+<title>Lab Görevi 1 - Animasyonlar</title>
 
 <style>
-  
-    @keyframes renkDegisim {
-        from { background-color: white; }
-        to { background-color: black; }
-    }
-
-   
-    div {
-        width: 150px;
-        height: 150px;
-        background-color: red;
-        animation-name: renkDegisim;
-        animation-duration: 4s;
-        animation-iteration-count: infinite; /* sonsuz döngü */
-        animation-direction: alternate; /* ileri-geri renk değişimi */
-    }
-
     body {
+        background: #f8f8f8;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         height: 100vh;
-        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    .kutu {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    /* 1. Yukarı–aşağı hareket eden */
+    .yukariAsagi {
+        background: crimson;
+        animation: yukariAsagi 2s ease-in-out infinite alternate;
+    }
+    @keyframes yukariAsagi {
+        from { transform: translateY(0); }
+        to   { transform: translateY(-80px); }
+    }
+
+    /* 2. Büyüyüp küçülen ve rengi değişen */
+    .buyuKucul {
+        background: dodgerblue;
+        animation: buyuKucul 3s ease-in-out infinite alternate;
+    }
+    @keyframes buyuKucul {
+        0%   { transform: scale(1); background: dodgerblue; }
+        50%  { transform: scale(1.5); background: purple; }
+        100% { transform: scale(1); background: orange; }
+    }
+
+    /* 3. Transparan değeri değişen */
+    .transparan {
+        background: seagreen;
+        animation: saydamlik 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes saydamlik {
+        0%   { opacity: 1; }
+        100% { opacity: 0.2; }
+    }
+
+    /* 4. Sağa sola giden gelen */
+    .sagaSola {
+        background: gold;
+        animation: sagaSola 3s ease-in-out infinite alternate;
+    }
+    @keyframes sagaSola {
+        from { transform: translateX(0); }
+        to   { transform: translateX(100px); }
+    }
+
+    /* 5. Dönen */
+    .donen {
+        background: tomato;
+        animation: donme 2.5s linear infinite;
+    }
+    @keyframes donme {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
     }
 </style>
 </head>
 <body>
 
-<div></div>
+    <div class="kutu yukariAsagi"></div>
+    <div class="kutu buyuKucul"></div>
+    <div class="kutu transparan"></div>
+    <div class="kutu sagaSola"></div>
+    <div class="kutu donen"></div>
 
 </body>
 </html>
