@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Emoji Animasyonları</title>
+<title>Lab Ödevi 1 - Yüz İkon Animasyonları</title>
 
 <style>
     body {
@@ -16,75 +16,100 @@
     }
 
     .kutu {
-        width: 110px;
-        height: 110px;
-        border-radius: 15px;
+        width: 120px;
+        height: 120px;
+        border-radius: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 55px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        box-shadow: 0 5px 18px rgba(0,0,0,0.18);
+        overflow: hidden;
+    }
+
+    .kutu img {
+        width: 70%;
+        height: 70%;
+        object-fit: contain;
     }
 
     /* 1️⃣ Yukarı–aşağı zıplayan */
     .yukariAsagi {
         background: #ef5350;
-        animation: yukariAsagi 1.8s ease-in-out infinite alternate;
+        animation: yukariAsagi 1.6s ease-in-out infinite alternate;
     }
     @keyframes yukariAsagi {
         from { transform: translateY(0); }
-        to { transform: translateY(-100px); }
+        to   { transform: translateY(-110px); }
     }
 
-    /* 2️⃣ Büyüyüp küçülen */
+    /* 2️⃣ Büyüyüp küçülen + renk değişen */
     .buyuKucul {
         background: #42a5f5;
-        animation: buyuKucul 2s ease-in-out infinite alternate;
+        animation: buyuKucul 2.1s ease-in-out infinite alternate;
     }
     @keyframes buyuKucul {
-        0% { transform: scale(1); background:#42a5f5; }
-        50% { transform: scale(1.4); background:#7e57c2; }
-        100% { transform: scale(1); background:#ffca28; }
+        0%   { transform: scale(1);   background:#42a5f5; }
+        40%  { transform: scale(1.5); background:#7e57c2; }
+        100% { transform: scale(1);   background:#ffca28; }
     }
 
     /* 3️⃣ Saydamlığı değişen */
     .transparan {
         background: #66bb6a;
-        animation: saydamlik 2.5s ease-in-out infinite alternate;
+        animation: saydamlik 2.3s ease-in-out infinite alternate;
     }
     @keyframes saydamlik {
-        0% { opacity: 1; }
-        100% { opacity: 0.2; }
+        0%   { opacity: 1;   transform: scale(1); }
+        100% { opacity: 0.15; transform: scale(0.9); }
     }
 
     /* 4️⃣ Sağa–sola kayan */
     .sagaSola {
         background: #ffa726;
-        animation: sagaSola 2.2s ease-in-out infinite alternate;
+        animation: sagaSola 2.4s ease-in-out infinite alternate;
     }
     @keyframes sagaSola {
         from { transform: translateX(0); }
-        to { transform: translateX(120px); }
+        to   { transform: translateX(130px); }
     }
 
     /* 5️⃣ Dönen */
     .donen {
         background: #ab47bc;
-        animation: donme 3s linear infinite;
+        animation: donme 2.8s linear infinite;
     }
     @keyframes donme {
         from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+        to   { transform: rotate(360deg); }
     }
 </style>
 </head>
 <body>
 
-    <div class="kutu yukariAsagi">🧍‍♂️</div>
-    <div class="kutu buyuKucul">🧎‍♀️</div>
-    <div class="kutu transparan">🧑</div>
-    <div class="kutu sagaSola">👩‍💻</div>
-    <div class="kutu donen">🧑‍🏫</div>
+    <!-- Yukarı-aşağı zıplayan yüz -->
+    <div class="kutu yukariAsagi">
+        <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Yüz 1">
+    </div>
+
+    <!-- Büyüyüp küçülen yüz -->
+    <div class="kutu buyuKucul">
+        <img src="https://cdn-icons-png.flaticon.com/512/742/742774.png" alt="Yüz 2">
+    </div>
+
+    <!-- Saydamlığı değişen yüz -->
+    <div class="kutu transparan">
+        <img src="https://cdn-icons-png.flaticon.com/512/742/742760.png" alt="Yüz 3">
+    </div>
+
+    <!-- Sağa sola kayan yüz -->
+    <div class="kutu sagaSola">
+        <img src="https://cdn-icons-png.flaticon.com/512/742/742752.png" alt="Yüz 4">
+    </div>
+
+    <!-- Dönen yüz -->
+    <div class="kutu donen">
+        <img src="https://cdn-icons-png.flaticon.com/512/742/742753.png" alt="Yüz 5">
+    </div>
 
 </body>
 </html>
