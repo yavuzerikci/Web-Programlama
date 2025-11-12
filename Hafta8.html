@@ -2,73 +2,40 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hafta 8 - Web Teknolojileri Kartları (Uyumlu)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hafta 8 - Ülke Kartları</title>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<!-- Bootstrap bağlantıları -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
-    /* Arka plan rengi ve genel font */
     body {
         background-color: #f4f6f9;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: Arial, sans-serif;
     }
-    
-    /* Ana başlık stili */
     h1 {
         text-align: center;
-        margin: 40px 0 30px;
-        color: #6a1b9a; /* Mor tonu */
-        font-weight: 800;
-        text-shadow: 1px 1px 2px #d3c0e1;
+        margin: 30px 0;
+        color: #6a1b9a;
     }
-    
-    /* Kartların genel görünümü */
     .card {
-        margin-bottom: 30px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-        height: 100%; /* Tüm kartların eşit yükseklikte olmasını sağlar */
-        background-color: #ffffff;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
     }
-    
-    /* Fare üzerine gelince kartın biraz yukarı kalkması */
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
-
-    /* Kart üzerindeki resimlerin stili */
-    .card-img-top {
-        width: 80px; 
-        height: 80px;
-        object-fit: contain;
-        margin: 25px auto 10px auto;
-        display: block;
-    }
-
-    /* Kart başlıkları */
     .card-title {
-        color: #4a148c; /* Koyu mor */
-        font-size: 1.3rem;
-        font-weight: 700;
-        text-align: center;
+        color: #4a148c;
+        font-size: 1.1rem;
     }
-
-    /* Kart metinleri */
-    .card-text {
-        text-align: center;
-        color: #555;
-        font-size: 0.95rem;
-    }
-
-    /* Kart alt bölümü stili */
-    .card-footer {
-        background-color: #f3e5f5; /* Açık mor footer */
-        border-top: 1px solid #ce93d8;
-        font-weight: 600;
+    .card img {
+        height: 120px;
+        object-fit: cover;
     }
 </style>
 </head>
@@ -76,179 +43,143 @@
 <body>
 
 <div class="container">
-    <h1><span class="badge badge-secondary">🛠️</span> Temel ve Popüler Yazılım Teknolojileri</h1>
+    <h1>Ülke Kartları</h1>
+    <div class="row">
 
-    <div class="row justify-content-center">
-        
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <!-- Kart 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" class="card-img-top" alt="HTML Logosu">
+                <img src="https://flagcdn.com/w320/tr.png" class="card-img-top" alt="Türkiye">
                 <div class="card-body">
-                    <h5 class="card-title">HTML5</h5>
-                    <p class="card-text">Web sayfalarının temel iskeletini ve içerik yapısını oluşturan işaretleme dilidir.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Yapısal Temel</small>
+                    <h5 class="card-title">Türkiye</h5>
+                    <p class="card-text">İstanbul ve Kapadokya gibi tarihi yerleriyle tanınır.</p>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <!-- Kart 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="card-img-top" alt="CSS Logosu">
+                <img src="https://flagcdn.com/w320/fr.png" class="card-img-top" alt="Fransa">
                 <div class="card-body">
-                    <h5 class="card-title">CSS3</h5>
-                    <p class="card-text">Web sayfasının görsel stilini, renklerini ve düzenini tanımlamak için kullanılır.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Görsel Stil</small>
+                    <h5 class="card-title">Fransa</h5>
+                    <p class="card-text">Paris ve Eyfel Kulesi ile ünlüdür.</p>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <!-- Kart 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="card-img-top" alt="JavaScript Logosu">
+                <img src="https://flagcdn.com/w320/it.png" class="card-img-top" alt="İtalya">
                 <div class="card-body">
-                    <h5 class="card-title">JavaScript</h5>
-                    <p class="card-text">Web sitelerine dinamik özellikler ve etkileşim (client-side scripting) ekler.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Etkileşim Dili</small>
+                    <h5 class="card-title">İtalya</h5>
+                    <p class="card-text">Roma, pizza ve tarihi mimarisiyle bilinir.</p>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <!-- Kart 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" class="card-img-top" alt="Bootstrap Logosu">
+                <img src="https://flagcdn.com/w320/de.png" class="card-img-top" alt="Almanya">
                 <div class="card-body">
-                    <h5 class="card-title">Bootstrap</h5>
-                    <p class="card-text">Hızlı ve mobil uyumlu (responsive) ön yüz tasarımları için kullanılan popüler bir CSS çatısıdır.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Responsive Çatı</small>
+                    <h5 class="card-title">Almanya</h5>
+                    <p class="card-text">Teknoloji ve mühendislikte öncüdür.</p>
                 </div>
             </div>
         </div>
+
+        <!-- Kart 5 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/es.png" class="card-img-top" alt="İspanya">
+                <div class="card-body">
+                    <h5 class="card-title">İspanya</h5>
+                    <p class="card-text">Flamenco dansı ve Barcelona’sı ile tanınır.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kart 6 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/jp.png" class="card-img-top" alt="Japonya">
+                <div class="card-body">
+                    <h5 class="card-title">Japonya</h5>
+                    <p class="card-text">Teknoloji ve anime kültürünün merkezidir.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kart 7 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/gb.png" class="card-img-top" alt="İngiltere">
+                <div class="card-body">
+                    <h5 class="card-title">İngiltere</h5>
+                    <p class="card-text">Londra ve kraliyet kültürüyle tanınır.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kart 8 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/kr.png" class="card-img-top" alt="Güney Kore">
+                <div class="card-body">
+                    <h5 class="card-title">Güney Kore</h5>
+                    <p class="card-text">K-pop ve teknolojiyle dünyaca ünlüdür.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kart 9 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/us.png" class="card-img-top" alt="ABD">
+                <div class="card-body">
+                    <h5 class="card-title">ABD</h5>
+                    <p class="card-text">Hollywood ve Silikon Vadisi ile öne çıkar.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kart 10 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/br.png" class="card-img-top" alt="Brezilya">
+                <div class="card-body">
+                    <h5 class="card-title">Brezilya</h5>
+                    <p class="card-text">Futbol ve Rio Karnavalı ile bilinir.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kart 11 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/ca.png" class="card-img-top" alt="Kanada">
+                <div class="card-body">
+                    <h5 class="card-title">Kanada</h5>
+                    <p class="card-text">Doğal güzellikleriyle ünlüdür.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kart 12 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <div class="card">
+                <img src="https://flagcdn.com/w320/eg.png" class="card-img-top" alt="Mısır">
+                <div class="card-body">
+                    <h5 class="card-title">Mısır</h5>
+                    <p class="card-text">Piramitleri ve Nil Nehri ile tanınır.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
-    
-    <div class="row justify-content-center">
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" class="card-img-top" alt="React Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">React</h5>
-                    <p class="card-text">Kullanıcı arayüzleri geliştirmek için kullanılan, Facebook tarafından geliştirilen bir JavaScript kütüphanesidir.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Frontend Kütüphanesi</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" class="card-img-top" alt="Angular Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">Angular</h5>
-                    <p class="card-text">Tek sayfa uygulamaları (SPA) geliştirmek için kullanılan kapsamlı bir JavaScript framework'üdür.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">JavaScript Framework</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" class="card-img-top" alt="Node.js Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">Node.js</h5>
-                    <p class="card-text">JavaScript'in sunucu tarafında çalışmasını sağlayarak, backend geliştirme ortamı sunar.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Backend Ortamı</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919841.png" class="card-img-top" alt="PHP Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">PHP</h5>
-                    <p class="card-text">Özellikle web geliştirme için tasarlanmış, geniş bir kullanım alanına sahip sunucu taraflı betik dilidir.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Sunucu Betiği</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" class="card-img-top" alt="Python Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">Python</h5>
-                    <p class="card-text">Yapay zeka, veri analizi ve hızlı backend servisleri geliştirmek için popüler bir dildir.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Veri Bilimi Dili</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" class="card-img-top" alt="C# Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">C#</h5>
-                    <p class="card-text">Microsoft'un .NET platformunda mobil, web ve masaüstü uygulamaları geliştirmek için kullanılır.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">.NET Dili</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="card-img-top" alt="SQL Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">SQL</h5>
-                    <p class="card-text">İlişkisel veri tabanlarındaki verileri yönetmek, sorgulamak ve güncellemek için kullanılan standart dildir.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Veri Tabanı Dili</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" class="card-img-top" alt="Git Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">Git</h5>
-                    <p class="card-text">Projelerin zaman içindeki değişikliklerini yönetmek için kullanılan en popüler versiyon kontrol sistemidir.</p>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-dark">Versiyon Kontrol</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div style="height: 50px;"></div>
-
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
 </body>
 </html>
