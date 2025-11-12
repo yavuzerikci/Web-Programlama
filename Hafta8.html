@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hafta 8 - Programlama Dilleri Kartları Ödevi</title>
+<title>Hafta 8 - Beşiktaş JK Bilgi Kartları Ödevi</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -18,54 +18,59 @@
     h1 {
         text-align: center;
         margin: 40px 0 30px;
-        color: #007bff; /* Mavi tonu */
-        font-weight: 700;
+        color: #000000; /* Siyah renk */
+        font-weight: 800;
+        text-shadow: 1px 1px 2px #cccccc; /* Hafif gölge */
     }
     
     /* Kartların genel görünümü */
     .card {
         margin-bottom: 30px;
-        border: 1px solid #ddd; /* Hafif kenarlık */
+        border: 2px solid #a0a0a0; /* Orta gri kenarlık */
         border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Yumuşak gölge */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Belirgin gölge */
         transition: transform 0.3s, box-shadow 0.3s;
-        height: 100%; /* Tüm kartların eşit yükseklikte olmasını sağlar */
+        height: 100%; 
+        background-color: #ffffff;
     }
     
-    /* Fare üzerine gelince kartın biraz yukarı kalkması */
+    /* Fare üzerine gelince kartın biraz yukarı kalkması ve renk değişimi */
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        border-color: #000000; /* Siyah hover kenarlık */
     }
 
     /* Kart üzerindeki resimlerin stili */
     .card-img-top {
-        width: 80px; /* Resim boyutunu düzenle */
+        width: 80px; 
         height: 80px;
         object-fit: contain;
         margin: 25px auto 10px auto;
         display: block;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* İkonlara hafif gölge */
     }
 
     /* Kart başlıkları */
     .card-title {
-        color: #007bff;
-        font-size: 1.25rem;
-        font-weight: 600;
+        color: #000000; /* Siyah başlık */
+        font-size: 1.3rem;
+        font-weight: 700;
         text-align: center;
     }
 
     /* Kart metinleri */
     .card-text {
         text-align: center;
-        color: #555;
+        color: #333;
         font-size: 0.95rem;
     }
 
     /* Kart alt bölümü stili */
     .card-footer {
-        background-color: #f8f9fa; /* Açık gri footer */
-        border-top: 1px solid #eee;
+        background-color: #e9e9e9; /* Açık gri footer */
+        border-top: 1px solid #c9c9c9;
+        font-weight: 600;
     }
 </style>
 </head>
@@ -73,58 +78,58 @@
 <body>
 
 <div class="container">
-    <h1><span class="badge badge-primary">🌐</span> Popüler Programlama Dilleri</h1>
+    <h1><span class="badge badge-dark">🦅</span> Beşiktaş Jimnastik Kulübü Bilgileri</h1>
 
     <div class="row justify-content-center">
         
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" class="card-img-top" alt="Python Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/9345/9345758.png" class="card-img-top" alt="Kuruluş Tarihi İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">Python</h5>
-                    <p class="card-text">Veri bilimi, yapay zeka ve web backend uygulamaları için çok yönlü bir dildir.</p>
+                    <h5 class="card-title">Kuruluş Tarihi</h5>
+                    <p class="card-text">Beşiktaş JK, Türk spor tarihinde önemli bir yere sahip olarak 1903 yılında kurulmuştur.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">Veri Bilimi / AI</small>
+                    <small class="text-dark">1903</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="card-img-top" alt="Java Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/2830/2830302.png" class="card-img-top" alt="Stadyum İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">Java</h5>
-                    <p class="card-text">Büyük kurumsal uygulamalar ve Android mobil geliştirmede standarttır.</p>
+                    <h5 class="card-title">Stadyum</h5>
+                    <p class="card-text">Kulübün iç saha maçlarına ev sahipliği yapan modern tesis: Vodafone Park.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">Kurumsal Yazılım / Android</small>
+                    <small class="text-dark">Vodafone Park</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/132/132240.png" class="card-img-top" alt="C++ Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/9164/9164996.png" class="card-img-top" alt="Renkler İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">C++</h5>
-                    <p class="card-text">Oyun motorları, işletim sistemleri ve performans kritik sistemler için temel dildir.</p>
+                    <h5 class="card-title">Kulüp Renkleri</h5>
+                    <p class="card-text">Beşiktaş'ın renkleri olan siyah ve beyaz, kulübün kimliğini ve asaletini simgeler.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">Sistem Programlama</small>
+                    <small class="text-dark">Siyah & Beyaz</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" class="card-img-top" alt="Swift Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/1275/1275990.png" class="card-img-top" alt="Kartal İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">Swift</h5>
-                    <p class="card-text">Apple'ın iOS ve macOS ekosistemi için tasarlanmış modern mobil geliştirme dilidir.</p>
+                    <h5 class="card-title">Lakap</h5>
+                    <p class="card-text">Takımın sembolü olan ve taraftarların sahiplendiği meşhur lakabı "Kara Kartallar".</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">iOS Geliştirme</small>
+                    <small class="text-dark">Kara Kartallar</small>
                 </div>
             </div>
         </div>
@@ -134,52 +139,52 @@
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" class="card-img-top" alt="Go Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/5074/5074213.png" class="card-img-top" alt="Kupa İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">Go (Golang)</h5>
-                    <p class="card-text">Ölçeklenebilir, yüksek performanslı ve hızlı sunucu uygulamaları (microservices) için idealdir.</p>
+                    <h5 class="card-title">Başarılar</h5>
+                    <p class="card-text">Süper Lig, Türkiye Kupası ve Süper Kupa başta olmak üzere zengin kupa koleksiyonu.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">Cloud / Backend</small>
+                    <small class="text-dark">Çoklu Kupa</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919835.png" class="card-img-top" alt="Kotlin Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/1146/1146648.png" class="card-img-top" alt="Oyuncu İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">Kotlin</h5>
-                    <p class="card-text">Modern Android geliştirmede Java'nın yerini alan, sade ve güvenli bir programlama dilidir.</p>
+                    <h5 class="card-title">Efsane İsimler</h5>
+                    <p class="card-text">Kulüp tarihinin en önemli isimlerinden, sembolleşmiş kaptan "Baba Hakkı" (Hakkı Yeten).</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">Android Geliştirme</small>
+                    <small class="text-dark">Hakkı Yeten</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="card-img-top" alt="SQL Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/722/722253.png" class="card-img-top" alt="Taraftar İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">SQL</h5>
-                    <p class="card-text">Tüm ilişkisel veri tabanı sistemlerinin temelini oluşturan, veri sorgulama dilidir.</p>
+                    <h5 class="card-title">Taraftar Gücü</h5>
+                    <p class="card-text">Türkiye'nin en ünlü ve etkili taraftar gruplarından biri olan "Çarşı" grubu.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">Veri Tabanı Yönetimi</small>
+                    <small class="text-dark">Çarşı</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919820.png" class="card-img-top" alt="R Logosu">
+                <img src="https://cdn-icons-png.flaticon.com/512/1146/1146645.png" class="card-img-top" alt="Yönetici İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">R</h5>
-                    <p class="card-text">İstatistiksel analizler, büyük veri işleme ve bilimsel hesaplamalar için kullanılan dildir.</p>
+                    <h5 class="card-title">Kulüp Başkanı</h5>
+                    <p class="card-text">Kulübün sportif ve finansal tüm işlerini yürüten ve yönetim kuruluna başkanlık eden kişi.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-muted">İstatistiksel Analiz</small>
+                    <small class="text-dark">Yönetim Kurulu</small>
                 </div>
             </div>
         </div>
