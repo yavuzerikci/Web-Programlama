@@ -3,52 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hafta 8 - Teknoloji Kartları Ödevi</title>
+<title>Hafta 8 - Programlama Dilleri Kartları Ödevi</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 <style>
-    /* Arka plan rengini ve genel fontu belirliyoruz. */
+    /* Arka plan rengi ve genel font */
     body {
-        background-color: #f4f6f9; /* Açık gri arka plan */
+        background-color: #f4f6f9;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
     /* Ana başlık stili */
     h1 {
         text-align: center;
-        margin: 40px 0 30px; /* Üstte ve altta daha fazla boşluk */
-        color: #4a148c; /* Koyu mor renk */
+        margin: 40px 0 30px;
+        color: #007bff; /* Mavi tonu */
         font-weight: 700;
     }
     
     /* Kartların genel görünümü */
     .card {
-        margin-bottom: 30px; /* Kartlar arasında dikey boşluk */
-        border: none; /* Kenarlık yok */
-        border-radius: 10px; /* Yuvarlatılmış köşeler */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Hafif gölge */
+        margin-bottom: 30px;
+        border: 1px solid #ddd; /* Hafif kenarlık */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Yumuşak gölge */
         transition: transform 0.3s, box-shadow 0.3s;
+        height: 100%; /* Tüm kartların eşit yükseklikte olmasını sağlar */
     }
     
     /* Fare üzerine gelince kartın biraz yukarı kalkması */
     .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     /* Kart üzerindeki resimlerin stili */
     .card-img-top {
-        width: 100px; /* Resmi daha belirgin yapmak için genişlik */
-        height: 100px;
-        object-fit: contain; /* Resmin oranını koru */
-        margin: 20px auto 10px auto; /* Üstte boşluk ve ortalama */
+        width: 80px; /* Resim boyutunu düzenle */
+        height: 80px;
+        object-fit: contain;
+        margin: 25px auto 10px auto;
         display: block;
     }
 
     /* Kart başlıkları */
     .card-title {
-        color: #6a1b9a; /* Başlık için mor ton */
+        color: #007bff;
         font-size: 1.25rem;
         font-weight: 600;
         text-align: center;
@@ -59,13 +60,12 @@
         text-align: center;
         color: #555;
         font-size: 0.95rem;
-        padding-bottom: 10px; /* Altta biraz boşluk */
     }
 
-    /* Sütunlar için küçük cihazlarda daha iyi bir görünüm */
-    .col-lg-3 {
-        padding-left: 15px;
-        padding-right: 15px;
+    /* Kart alt bölümü stili */
+    .card-footer {
+        background-color: #f8f9fa; /* Açık gri footer */
+        border-top: 1px solid #eee;
     }
 </style>
 </head>
@@ -73,58 +73,58 @@
 <body>
 
 <div class="container">
-    <h1><span class="badge badge-secondary">💻</span> Temel Web Teknolojileri</h1>
+    <h1><span class="badge badge-primary">🌐</span> Popüler Programlama Dilleri</h1>
 
     <div class="row justify-content-center">
         
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" class="card-img-top" alt="HTML5 Logosu">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" class="card-img-top" alt="Python Logosu">
                 <div class="card-body">
-                    <h5 class="card-title">HTML</h5>
-                    <p class="card-text">Web sayfalarının iskeletini ve içeriğini yapılandıran temel dildir.</p>
+                    <h5 class="card-title">Python</h5>
+                    <p class="card-text">Veri bilimi, yapay zeka ve web backend uygulamaları için çok yönlü bir dildir.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Yapısal Temel</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">Veri Bilimi / AI</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="card-img-top" alt="CSS3 Logosu">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="card-img-top" alt="Java Logosu">
                 <div class="card-body">
-                    <h5 class="card-title">CSS</h5>
-                    <p class="card-text">Web sayfasının renklerini, düzenini ve görsel stil özelliklerini belirler.</p>
+                    <h5 class="card-title">Java</h5>
+                    <p class="card-text">Büyük kurumsal uygulamalar ve Android mobil geliştirmede standarttır.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Görsel Stil</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">Kurumsal Yazılım / Android</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="card-img-top" alt="JavaScript Logosu">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/132/132240.png" class="card-img-top" alt="C++ Logosu">
                 <div class="card-body">
-                    <h5 class="card-title">JavaScript</h5>
-                    <p class="card-text">Web sitelerine dinamizm, etkileşim ve davranış katmak için kullanılır.</p>
+                    <h5 class="card-title">C++</h5>
+                    <p class="card-text">Oyun motorları, işletim sistemleri ve performans kritik sistemler için temel dildir.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Etkileşim Dili</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">Sistem Programlama</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" class="card-img-top" alt="Bootstrap Logosu">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" class="card-img-top" alt="Swift Logosu">
                 <div class="card-body">
-                    <h5 class="card-title">Bootstrap</h5>
-                    <p class="card-text">Hızlı ve mobil uyumlu (responsive) tasarımlar için geliştirilmiş bir CSS/JS çatısıdır.</p>
+                    <h5 class="card-title">Swift</h5>
+                    <p class="card-text">Apple'ın iOS ve macOS ekosistemi için tasarlanmış modern mobil geliştirme dilidir.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Responsive Framework</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">iOS Geliştirme</small>
                 </div>
             </div>
         </div>
@@ -133,108 +133,53 @@
     <div class="row justify-content-center">
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" class="card-img-top" alt="Python Logosu">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" class="card-img-top" alt="Go Logosu">
                 <div class="card-body">
-                    <h5 class="card-title">Python</h5>
-                    <p class="card-text">Veri bilimi, yapay zeka ve web geliştirme dahil çok yönlü kullanılan bir dildir.</p>
+                    <h5 class="card-title">Go (Golang)</h5>
+                    <p class="card-text">Ölçeklenebilir, yüksek performanslı ve hızlı sunucu uygulamaları (microservices) için idealdir.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Çok Yönlü Dil</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">Cloud / Backend</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" class="card-img-top" alt="React Logosu">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919835.png" class="card-img-top" alt="Kotlin Logosu">
                 <div class="card-body">
-                    <h5 class="card-title">React</h5>
-                    <p class="card-text">Facebook tarafından geliştirilen, kullanıcı arayüzleri oluşturmaya yarayan bir JavaScript kütüphanesidir.</p>
+                    <h5 class="card-title">Kotlin</h5>
+                    <p class="card-text">Modern Android geliştirmede Java'nın yerini alan, sade ve güvenli bir programlama dilidir.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">UI Kütüphanesi</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">Android Geliştirme</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" class="card-img-top" alt="Node.js Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">Node.js</h5>
-                    <p class="card-text">JavaScript'in sunucu tarafında çalışmasını sağlayan açık kaynaklı bir çalışma ortamıdır.</p>
-                </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Sunucu Ortamı</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" class="card-img-top" alt="Git Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">Git</h5>
-                    <p class="card-text">Projelerin zaman içindeki değişikliklerini kaydetmek için kullanılan dağıtık bir versiyon kontrol sistemidir.</p>
-                </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Versiyon Kontrol</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919841.png" class="card-img-top" alt="PHP Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">PHP</h5>
-                    <p class="card-text">Özellikle web geliştirme için tasarlanmış, sunucu taraflı bir betik dilidir.</p>
-                </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Sunucu Betik Dili</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" class="card-img-top" alt="Angular Logosu">
-                <div class="card-body">
-                    <h5 class="card-title">Angular</h5>
-                    <p class="card-text">Google tarafından geliştirilen, büyük ölçekli uygulamalar için kapsamlı bir TypeScript tabanlı framework'tür.</p>
-                </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Framework</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
+            <div class="card">
                 <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="card-img-top" alt="SQL Logosu">
                 <div class="card-body">
                     <h5 class="card-title">SQL</h5>
-                    <p class="card-text">İlişkisel veri tabanlarını yönetmek ve sorgulamak için standartlaşmış bir dildir.</p>
+                    <p class="card-text">Tüm ilişkisel veri tabanı sistemlerinin temelini oluşturan, veri sorgulama dilidir.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">Veri Sorgulama</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">Veri Tabanı Yönetimi</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" class="card-img-top" alt="C# Logosu">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919820.png" class="card-img-top" alt="R Logosu">
                 <div class="card-body">
-                    <h5 class="card-title">C#</h5>
-                    <p class="card-text">Microsoft tarafından geliştirilen, .NET platformunda yaygın kullanılan modern, nesne tabanlı bir programlama dilidir.</p>
+                    <h5 class="card-title">R</h5>
+                    <p class="card-text">İstatistiksel analizler, büyük veri işleme ve bilimsel hesaplamalar için kullanılan dildir.</p>
                 </div>
-                <div class="card-footer bg-white border-0 text-center">
-                    <small class="text-muted">.NET Dili</small>
+                <div class="card-footer text-center">
+                    <small class="text-muted">İstatistiksel Analiz</small>
                 </div>
             </div>
         </div>
