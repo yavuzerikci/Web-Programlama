@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hafta 8 - Beşiktaş JK Bilgi Kartları Ödevi</title>
+<title>Hafta 8 - Beşiktaş JK 12 Kart Ödevi</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -18,27 +18,27 @@
     h1 {
         text-align: center;
         margin: 40px 0 30px;
-        color: #000000; /* Siyah renk */
+        color: #000000;
         font-weight: 800;
-        text-shadow: 1px 1px 2px #cccccc; /* Hafif gölge */
+        text-shadow: 1px 1px 2px #cccccc;
     }
     
     /* Kartların genel görünümü */
     .card {
         margin-bottom: 30px;
-        border: 2px solid #a0a0a0; /* Orta gri kenarlık */
+        border: 2px solid #a0a0a0;
         border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Belirgin gölge */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         transition: transform 0.3s, box-shadow 0.3s;
-        height: 100%; 
+        height: 100%; /* Tüm kartların eşit yükseklikte olmasını sağlar */
         background-color: #ffffff;
     }
     
-    /* Fare üzerine gelince kartın biraz yukarı kalkması ve renk değişimi */
+    /* Fare üzerine gelince kartın biraz yukarı kalkması */
     .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        border-color: #000000; /* Siyah hover kenarlık */
+        border-color: #000000;
     }
 
     /* Kart üzerindeki resimlerin stili */
@@ -48,12 +48,12 @@
         object-fit: contain;
         margin: 25px auto 10px auto;
         display: block;
-        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* İkonlara hafif gölge */
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
     }
 
     /* Kart başlıkları */
     .card-title {
-        color: #000000; /* Siyah başlık */
+        color: #000000;
         font-size: 1.3rem;
         font-weight: 700;
         text-align: center;
@@ -68,9 +68,17 @@
 
     /* Kart alt bölümü stili */
     .card-footer {
-        background-color: #e9e9e9; /* Açık gri footer */
+        background-color: #e9e9e9;
         border-top: 1px solid #c9c9c9;
         font-weight: 600;
+    }
+    
+    /* Oyuncu kartları için farklı bir renk tonu */
+    .card.player-card {
+        border-color: #5cb85c; /* Yeşil tonu */
+    }
+    .card.player-card .card-title {
+        color: #5cb85c;
     }
 </style>
 </head>
@@ -78,7 +86,7 @@
 <body>
 
 <div class="container">
-    <h1><span class="badge badge-dark">🦅</span> Beşiktaş Jimnastik Kulübü Bilgileri</h1>
+    <h1><span class="badge badge-dark">⚽</span> Beşiktaş JK 12 Kart: Kulüp ve Kadro</h1>
 
     <div class="row justify-content-center">
         
@@ -87,7 +95,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/9345/9345758.png" class="card-img-top" alt="Kuruluş Tarihi İkonu">
                 <div class="card-body">
                     <h5 class="card-title">Kuruluş Tarihi</h5>
-                    <p class="card-text">Beşiktaş JK, Türk spor tarihinde önemli bir yere sahip olarak 1903 yılında kurulmuştur.</p>
+                    <p class="card-text">Türk spor tarihinin en eski kulüplerinden biri olup, 1903 yılında kurulmuştur.</p>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-dark">1903</small>
@@ -100,7 +108,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/2830/2830302.png" class="card-img-top" alt="Stadyum İkonu">
                 <div class="card-body">
                     <h5 class="card-title">Stadyum</h5>
-                    <p class="card-text">Kulübün iç saha maçlarına ev sahipliği yapan modern tesis: Vodafone Park.</p>
+                    <p class="card-text">Kulübün maçlarına ev sahipliği yapan ve boğaz manzaralı modern tesis: Vodafone Park.</p>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-dark">Vodafone Park</small>
@@ -113,7 +121,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/9164/9164996.png" class="card-img-top" alt="Renkler İkonu">
                 <div class="card-body">
                     <h5 class="card-title">Kulüp Renkleri</h5>
-                    <p class="card-text">Beşiktaş'ın renkleri olan siyah ve beyaz, kulübün kimliğini ve asaletini simgeler.</p>
+                    <p class="card-text">Asaleti ve gücü temsil eden, kulübün sembolleşmiş renkleri siyah ve beyazdır.</p>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-dark">Siyah & Beyaz</small>
@@ -126,7 +134,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/1275/1275990.png" class="card-img-top" alt="Kartal İkonu">
                 <div class="card-body">
                     <h5 class="card-title">Lakap</h5>
-                    <p class="card-text">Takımın sembolü olan ve taraftarların sahiplendiği meşhur lakabı "Kara Kartallar".</p>
+                    <p class="card-text">Takımın ve taraftarının ortak sembolü olan coşkulu ve meşhur lakabı: "Kara Kartallar".</p>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-dark">Kara Kartallar</small>
@@ -141,24 +149,24 @@
             <div class="card">
                 <img src="https://cdn-icons-png.flaticon.com/512/5074/5074213.png" class="card-img-top" alt="Kupa İkonu">
                 <div class="card-body">
-                    <h5 class="card-title">Başarılar</h5>
-                    <p class="card-text">Süper Lig, Türkiye Kupası ve Süper Kupa başta olmak üzere zengin kupa koleksiyonu.</p>
+                    <h5 class="card-title">Kupa Sayısı</h5>
+                    <p class="card-text">Süper Lig, Türkiye Kupası ve Süper Kupa dahil olmak üzere birçok önemli başarısı bulunur.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-dark">Çoklu Kupa</small>
+                    <small class="text-dark">Ulusal Başarılar</small>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1146/1146648.png" class="card-img-top" alt="Oyuncu İkonu">
+                <img src="https://cdn-icons-png.flaticon.com/512/1146/1146648.png" class="card-img-top" alt="Efsane Oyuncu İkonu">
                 <div class="card-body">
                     <h5 class="card-title">Efsane İsimler</h5>
-                    <p class="card-text">Kulüp tarihinin en önemli isimlerinden, sembolleşmiş kaptan "Baba Hakkı" (Hakkı Yeten).</p>
+                    <p class="card-text">Kulüp tarihinin sembol ismi, hem futbolcu hem de yönetici olarak hizmet etmiş Baba Hakkı (Hakkı Yeten).</p>
                 </div>
                 <div class="card-footer text-center">
-                    <small class="text-dark">Hakkı Yeten</small>
+                    <small class="text-dark">Baba Hakkı</small>
                 </div>
             </div>
         </div>
@@ -168,7 +176,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/722/722253.png" class="card-img-top" alt="Taraftar İkonu">
                 <div class="card-body">
                     <h5 class="card-title">Taraftar Gücü</h5>
-                    <p class="card-text">Türkiye'nin en ünlü ve etkili taraftar gruplarından biri olan "Çarşı" grubu.</p>
+                    <p class="card-text">Takımın en önemli destekçisi, politik ve sosyal duruşuyla da tanınan "Çarşı" grubu.</p>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-dark">Çarşı</small>
@@ -181,10 +189,65 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/1146/1146645.png" class="card-img-top" alt="Yönetici İkonu">
                 <div class="card-body">
                     <h5 class="card-title">Kulüp Başkanı</h5>
-                    <p class="card-text">Kulübün sportif ve finansal tüm işlerini yürüten ve yönetim kuruluna başkanlık eden kişi.</p>
+                    <p class="card-text">Kulübün en üst düzey yönetiminden ve sportif başarı hedeflerinden sorumlu kişi.</p>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-dark">Yönetim Kurulu</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card player-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3082/3082352.png" class="card-img-top" alt="Orkun Kökçü İkonu">
+                <div class="card-body">
+                    <h5 class="card-title">Orkun Kökçü</h5>
+                    <p class="card-text">Takımın merkez orta sahasında görev yapan, yüksek pas yeteneği ve oyun kurma becerisiyle öne çıkan oyuncu.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <small class="text-success">Merkez Orta Saha</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card player-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/5074/5074258.png" class="card-img-top" alt="Tammy Abraham İkonu">
+                <div class="card-body">
+                    <h5 class="card-title">Tammy Abraham</h5>
+                    <p class="card-text">Gol yollarında etkili, güçlü fiziği ve bitiriciliğiyle dikkat çeken takımın önemli forveti.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <small class="text-success">Santrafor</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card player-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/5074/5074218.png" class="card-img-top" alt="Wilfred Ndidi İkonu">
+                <div class="card-body">
+                    <h5 class="card-title">Wilfred Ndidi</h5>
+                    <p class="card-text">Orta sahada top kapma ve savunma becerileriyle takımın defansif gücüne katkı sağlayan önemli bir isim.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <small class="text-success">Ön Libero</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card player-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1146/1146641.png" class="card-img-top" alt="Gabriel Paulista İkonu">
+                <div class="card-body">
+                    <h5 class="card-title">Gabriel Paulista</h5>
+                    <p class="card-text">Savunmanın liderlerinden, tecrübesi ve pozisyon bilgisi ile defans hattının güvenilir stoperi.</p>
+                </div>
+                <div class="card-footer text-center">
+                    <small class="text-success">Stoper</small>
                 </div>
             </div>
         </div>
