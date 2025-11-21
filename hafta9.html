@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafta 9 - JavaScript Lab</title>
+
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s;
+  }
+
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .image-container {
+    margin-top: 20px;
+  }
+
+  img {
+    width: 180px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4a148c;
+    color: white;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: #7b1fa2;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>🎨 Rastgele Renk ve Görsel Görevi</h1>
+
+<div id="randomImageContainer" class="image-container"></div>
+
+<button onclick="showImages()">GÖSTER</button>
+<button onclick="hideImages()">GİZLE</button>
+
+<div id="gallery" class="image-container">
+  <img src="https://picsum.photos/id/237/200/120" alt="Resim 1">
+  <img src="https://picsum.photos/id/238/200/120" alt="Resim 2">
+  <img src="https://picsum.photos/id/239/200/120" alt="Resim 3">
+</div>
+
+<script>
+  // 🎨 Sayfa açıldığında rastgele arka plan rengi
+  const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = randomColor;
+
+  // 🖼️ Rastgele 10 resimden 1 tanesini seç
+  const images = [
+    "https://picsum.photos/id/10/200/120",
+    "https://picsum.photos/id/20/200/120",
+    "https://picsum.photos/id/30/200/120",
+    "https://picsum.photos/id/40/200/120",
+    "https://picsum.photos/id/50/200/120",
+    "https://picsum.photos/id/60/200/120",
+    "https://picsum.photos/id/70/200/120",
+    "https://picsum.photos/id/80/200/120",
+    "https://picsum.photos/id/90/200/120",
+    "https://picsum.photos/id/100/200/120"
+  ];
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+  document.getElementById("randomImageContainer").innerHTML = `<img src="${randomImage}" alt="Rastgele Görsel">`;
+
+  // 👀 3 resmi göster/gizle
+  function showImages() {
+    document.getElementById("gallery").style.display = "block";
+  }
+
+  function hideImages() {
+    document.getElementById("gallery").style.display = "none";
+  }
+
+  // Başlangıçta gizle
+  hideImages();
+</script>
+
+</body>
+</html>
