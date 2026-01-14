@@ -16,4 +16,5 @@
 - Open-Meteo (Hava Durumu + Geocoding):
   - https://open-meteo.com/
   - https://geocoding-api.open-meteo.com/
-  - 
+  -<img width="1093" height="944" alt="image" src="https://github.com/user-attachments/assets/c5d612c0-2252-4df1-96f9-37a9c294a7d7" />
+ 
